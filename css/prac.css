@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* reset style */
+html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  border: 0;
+}
+
+/* hidden contents */
+.hidden {
+  display: none;
+}
+
+/* body style */
+html {
+  font-size: 0.625em;
+}
+
+body {
+  color: #181818;
+  font-family: 'Noto Sans Regular';
+  font-size: 1.4rem;
+}
+
+/* link style */
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  text-decoration: none;
+  color: #c98da5;
+}
+a:hover, a:focus {
+  color: #c98da5;
+}
+
+/* layout */
+.wrapper {
+  background: #dfdfdf;
+}
+
+.header {
+  width: 940px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* HEADER */
+.main-menu {
+  
+}
