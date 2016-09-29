@@ -28,7 +28,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 /* 숨김 컨텐츠 */
@@ -106,7 +105,6 @@ body {
 
 /* interpark link*/
 .interpark {
-  display: inline-block;
   color: #1e75d6
 }
 
