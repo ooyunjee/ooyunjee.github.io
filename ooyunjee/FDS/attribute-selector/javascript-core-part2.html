@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Core Part2</title>
+  <link rel="stylesheet" href="css/javascript-core-part2.css">
+  <script src="js/javascript-core-part2.js"></script>
+</head>
+<body>
+  <button type="button" class="align-right-btn">오른쪽 정렬</button>
+  <div class="demo-container"></div>
+
+  <script>
+  var btn = document.getElementsByTagName('button')[0];
+  var demo = document.getElementsByTagName('div')[0];
+
+  btn.onclick = function() {
+    var old_class = demo.getAttribute('class')
+    demo.setAttribute('class', old_class + ' align-right');
+  };
+  </script>
+</body>
+</html>
