@@ -339,6 +339,11 @@ body {
 	padding: 60px 120px 50px;
 }
 
+.share li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
 .share button {
 	border-radius: 30px;
 	width: 85px;
