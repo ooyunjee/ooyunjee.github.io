@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 
 /* reset style */
 html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
@@ -15,7 +16,7 @@ img {
 }
 
 /* hidden contents */
-.hidden {
+.a11y {
   display: none;
 }
 
@@ -25,36 +26,129 @@ html {
 }
 
 body {
-  color: #181818;
-  font-family: 'Noto Sans Regular';
-  font-size: 1.4rem;
+  color: #222;
+  font-family: 'Noto Sans Regular', sans-serif;
+	line-height: 1.2;
+	letter-spacing: 0.05em;
 }
 
 /* link style */
 a:link {
   text-decoration: none;
-  color: inherit;
+  color: #6b6b6b;
 }
 a:visited {
   text-decoration: none;
-  color: #c98da5;
+  color: #6b6b6b;
 }
-a:hover, a:focus {
-  color: #c98da5;
+a:hover {
+  color: #9e697e;
+}
+a:active {
+	background: #ffdfec;
+}
+a:focus {
+	background: #ffdfec;
+	outline: none;
 }
 
 /* layout */
-.wrapper {
-  background: #dfdfdf;
+.container {
+  background: #ffffff;
 }
 
-.header {
-  width: 940px;
-  margin: 0 auto;
-  background: #fff;
+.main, .footer {
+	width: 80%;
+	margin: 0 auto;
 }
 
 /* HEADER */
-.main-menu {
-  
+.header {
+  text-align: center;
+	padding: 10rem;
+}
+
+.header-name {
+	font-size: 5rem;
+	position: relative;
+	display: inline-block;
+	letter-spacing: 0.1em;
+}
+
+.header-name:before,
+.header-name::before {
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: calc(50% - 5px);
+	width: 20px;
+	height: 5px;
+	background: #222;
+}
+
+/* MAIN */
+.main {
+	height: 500px;
+}
+
+.nav {
+	margin: 0 auto;
+}
+
+/*
+.main-menu > li {
+	font-size: 1.5rem;
+	float: left;
+	position: relative;
+}
+
+.main-menu > li > a {
+	font-size: 1.5rem;
+	margin-right: 10px;
+	display: block;
+}
+
+.main-menu > li > a:hover,
+.main-menu > li > a:focus {
+	display: block;
+}
+
+.main-menu ul {
+	position: absolute;
+  top: 30px;
+}
+
+.homework {
+	left: 0;
+	display: none;
+}
+
+.lecture {
+	left: 0;
+	display: none;
+}
+
+.main-menu ul li,
+.main-menu ul a {
+  display: inline-block;
+}
+
+.main-menu ul a {
+  padding: 10px;
+}
+
+.main-menu > li > a:hover > ul,
+.main-menu > li > a:focus > ul {
+	display: block;
+}*/
+
+/* FOOTER */
+.footer {
+	border-top: 1px solid #eee;
+	height: 100px;
+	padding: 3rem 0;
+}
+.footer-credits {
+  font-size: 1.3rem;
+	float: right;
 }
