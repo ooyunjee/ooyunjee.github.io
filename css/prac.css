@@ -95,6 +95,11 @@ a:focus {
 	margin: 0 auto;
 }
 
+.main-menu > li {
+	font-size: 1.5rem;
+	position: relative;
+}
+
 /*
 .main-menu > li {
 	font-size: 1.5rem;
