@@ -1,0 +1,2 @@
+[9/27/2016, 10:27:23 AM] layer "photo-02.jgp": Unsupported extension: jgp
+[9/27/2016, 10:27:23 AM] layer "Google+": Expected end of input but "+" found.
