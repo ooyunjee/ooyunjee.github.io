@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Varela+Round';
+
+/* 스타일 초기화 */
+html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+/* 숨김 컨텐츠 */
+legend {
+  position: absolute;
+  left: -9999em;
+}
+
+/* 본문 스타일 */
+html {
+  font-size: 0.625em; /* 10px, 자식 요소에 상속함 */
+}
+
+body {
+  background: #eee;
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* profile */
+.profile {
+  width: 360px;
+  height: 550px;
+  background: #fff;
+  padding: 39px 60px 47px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile-subject {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+/* name, phone, email */
+.first-name, .last-name, .phone, .email {
+  margin-bottom: 20px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.first-name label, .last-name label, .phone label, .email label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.first-name input, .last-name input, .phone input, .email input {
+  background: #f6f6f6;
+  border-radius: 30px;
+  border: 1px solid #f6f6f6;
+  padding: 9px 20px;
+  width: 240px;
+  box-sizing: border-box;
+}
+
+/* gender */
+/*.btn-radio {
+  margin-bottom: 20px;
+}*/
+.radio-male, .radio-female {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.radio-male label, .radio-female label {
+  display: inline-block;
+	margin-bottom: 25px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.radio-male input, .radio-female input {
+  margin-right: 5px;
+	background: #f6f6f6;
+	cursor: pointer;
+}
+
+
+/* date of birth */
+.birth-subject {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.birth-select {
+  margin-bottom: 20px;
+}
+
+.birth-select li {
+  float: left;
+}
+
+.birth-select::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.select-date, .select-month, .select-year {
+  /*background: #f6f6f6;*/
+  border-radius: 30px;
+  border: 1px solid #f6f6f6;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 70px;
+  height: 30px;
+  margin-right: 10px;
+  -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+  background: #f6f6f6 url(../img/arrow.png) no-repeat ; /* 화살표 모양의 이미지 */
+	-webkit-background-size: 5px 5px;
+	background-size: 6px 4px;
+	cursor: pointer;
+}
+
+.select-year {
+  width: 80px;
+  margin: 0;
+}
+
+/* save btn */
+.btn-save {
+  width: 110px;
+  height: 30px;
+  border-radius: 15px;
+  background: #1f4ba5;
+  border: 1px solid #1f4ba5;
+  color: #fff;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+
+/* x btn */
+.btn-x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #fff;
+  margin: 20px;
+}
+
+.btn-x img {
+  width: 8px;
+  height: 8px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Profile information</title>
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <h1 class="profile-subject">Profile information</h1>
+      <form action="javascript: alert('Save');">
+        <fieldset>
+          <legend>profile information</legend>
+          <div class="first-name">
+            <label for="first-name">First name</label>
+            <input id="first-name" type="text" placeholder="Komol">
+          </div>
+          <div class="last-name">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" placeholder="Kuchkarov">
+          </div>
+          <div class="phone">
+            <label for="phone">Phone number</label>
+            <input id="phone" type="text" placeholder="1-800-243-0000">
+          </div>
+          <div class="email">
+            <label for="email">E-mail</label>
+            <input id="email" type="text" placeholder="komolkuchkarov@gmail.com">
+          </div>
+        </fieldset>
+        <fieldset>
+          <!-- <div class="btn-radio"> -->
+            <legend>gender radio button</legend>
+            <div class="radio-male">
+              <input id="male" type="radio" name="gender" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div class="radio-female">
+              <input id="female" type="radio" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+          <!-- </div> -->
+        </fieldset>
+        <fieldset>
+          <h2 class="birth-subject">Date of birth</h2>
+          <ul class="birth-select">
+            <li>
+              <select class="select-date">
+                <optgroup label="Date">
+                  <option value="21">21</option>
+                  <option value="20">20</option>
+                  <option value="19">19</option>
+                  <option value="18">18</option>
+                </optgroup>
+              </select>
+            </li>
+            <li>
+              <select class="select-month">
+                <optgroup label="Month">
+                  <option value="11">11</option>
+                  <option value="10">10</option>
+                  <option value="9">9</option>
+                  <option value="8">8</option>
+                </optgroup>
+              </select>
+            </li>
+            <li>
+              <select class="select-year">
+                <optgroup label="Year">
+                  <option value="1993">1993</option>
+                  <option value="1992">1992</option>
+                  <option value="1991">1991</option>
+                  <option value="1990">1990</option>
+                </optgroup>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="btn-save" type="submit">Save</button>
+      </form>
+      <button class="btn-x" type="submit">
+        <img src="img/flag.png" alt="">
+      </button>
+    </div>
+  </div>
+</body>
+</html>
