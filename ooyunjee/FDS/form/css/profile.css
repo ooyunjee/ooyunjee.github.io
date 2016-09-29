@@ -106,6 +106,7 @@ body {
 
 .birth-select li {
   float: left;
+	margin-right: 5px;
 }
 
 .birth-select::after {
@@ -115,26 +116,21 @@ body {
 }
 
 .select-date, .select-month, .select-year {
-  /*background: #f6f6f6;*/
-  border-radius: 30px;
+	border-radius: 30px;
   border: 1px solid #f6f6f6;
   padding: 0 20px;
   box-sizing: border-box;
   width: 70px;
   height: 30px;
-  margin-right: 10px;
   -webkit-appearance: none;  /* 네이티브 외형 감추기 */
   -moz-appearance: none;
   appearance: none;
-  background: #f6f6f6 url(../img/arrow.png) no-repeat ; /* 화살표 모양의 이미지 */
-	-webkit-background-size: 5px 5px;
-	background-size: 6px 4px;
+	background: #f6f6f6 url(../img/arrow.png) no-repeat right 10px center; /* 화살표 모양의 이미지 */
 	cursor: pointer;
 }
 
 .select-year {
   width: 80px;
-  margin: 0;
 }
 
 /* save btn */
