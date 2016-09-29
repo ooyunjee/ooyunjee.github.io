@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+body {
+  margin: 4rem;
+  font-size: 75%;
+  line-height: 1.5;
+  font-family: 'YouandiModernTR';
+}
+
+.yj_tr {
+  font-family: 'YouandiModernTR';
+}
+
+.yj_tb {
+  font-family: 'YouandiModernTB';
+}
+
+.yj_heb {
+  font-family:'YouandiModernHEB';
+}
+
+.container {
+  width: 1032px;
+  margin: 0 auto;
+}
+
+.reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* 숨김 컨텐츠 */
+.readable-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  margin: -1px;
+}
+
+/* TABLE */
+.hd-culture-project-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: 3px solid #555555;
+  border-bottom: 1px solid #555555;
+  color: #666;
+  font: 0.9rem;
+  letter-spacing: 0.03em;
+  text-align: left;
+  width: 100%;
+}
+
+.hd-culture-project-table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hd-culture-project-table tr:nth-child(1) > th:first-child,
+.hd-culture-project-table tr:nth-child(2) > th:first-child,
+.hd-culture-project-table tr:nth-child(6) > th:first-child,
+.hd-culture-project-table tr:nth-child(7) > th:first-child,
+.hd-culture-project-table tr:nth-child(8) > th:first-child {
+  width: 170px;
+  padding-left: 5em;
+  padding-right: 0;
+}
+
+.hd-culture-project-table tr:nth-child(2) > th:not(:first-child),
+.hd-culture-project-table tr:nth-child(3) > *,
+.hd-culture-project-table tr:nth-child(4) > * {
+  border-left: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+.hd-culture-project-table tr:nth-child(2) > th:nth-child(2),
+.hd-culture-project-table tr:nth-child(3) > th:first-child,
+.hd-culture-project-table tr:nth-child(4) > th:first-child {
+  width: 150px;
+}
+
+.hd-culture-project-table tr > *:first-child {
+  border-right: 1px solid #f0f0f0;
+}
+
+.hd-culture-project-table tr:nth-child(5) > td {
+  border-right: 0;
+}
+
+.hd-culture-project-table li::before {
+  content: "- ";
+  color: #666;
+}
+
+.hd-culture-project-table th {
+  color: #000;
+  font-size: 0.95rem;
+  vertical-align: top;
+}
+
+.hd-culture-project-table th,
+.hd-culture-project-table td {
+  padding: 1.6em 2em;
+  font-weight: normal;
+}
+
+/* interpark link*/
+.interpark {
+  display: inline-block;
+  color: #1e75d6
+}
+
+.interpark:link {
+  text-decoration: none;
+  color: #1e75d6
+}
+
+.interpark:hover {
+  border-bottom: 1px solid #1e75d6;
+}
