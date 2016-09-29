@@ -96,17 +96,17 @@ body {
   position: relative;
 }
 
-.item-price p {
-  font-size: 1.4rem;
-  font-family: 'Oswald', sans-serif;
-}
-
 .hit, .sale, .new {
   position: absolute;
   top: 70px;
 	width: 34px;
 	height: 15px;
 	text-indent: -9999em;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-family: 'Oswald', sans-serif;
 }
 
 .item-price p[class*="sale"] ~ p {
@@ -117,6 +117,15 @@ body {
 .item-price p[class*="new"]    { background: url("../img/icon-new.png") no-repeat;    }
 .item-price p[class*="hit"]    { background: url("../img/icon-hit.png") no-repeat;    }
 
+.original-price {
+	font-family: 'Oswald', sans-serif;
+	color: #a1a1a1;
+	position: absolute;
+	top: 70px;
+	left: 78px;
+	text-decoration: line-through;
+}
+
 /* item add to cart */
 .item-add-cart {
   order: 3;
@@ -124,29 +133,20 @@ body {
 }
 
 .select-size {
-  border-radius: 30px;
-  border: 1px solid #f6f6f6;
 	color: #868686;
 	font-family: 'PT Serif', sans-serif;
 	font-style: italic;
-  padding: 0 20px;
+	border-radius: 30px;
+  border: 1px solid #f6f6f6;
+  padding: 0 15px;
   box-sizing: border-box;
   width: 70px;
   height: 30px;
-  margin-right: 5px;
   -webkit-appearance: none;  /* 네이티브 외형 감추기 */
   -moz-appearance: none;
   appearance: none;
-  background: #f6f6f6 url(../img/arrow.png) no-repeat ; /* 화살표 모양의 이미지 */
-	-webkit-background-size: 5px 5px;
-	background-size: 6px 4px;
+	background: #f6f6f6 url(../img/arrow.png) no-repeat right 10px center; /* 화살표 모양의 이미지 */
 	cursor: pointer;
-}
-
-.select-size:checked {
-	color: #222;
-  font-family: 'Varela Round', sans-serif;
-	font-style: normal;
 }
 
 .btn-add-cart {
