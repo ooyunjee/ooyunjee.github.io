@@ -107,7 +107,7 @@ a:focus {
 
 /* MAIN */
 .main {
-	padding-bottom: 100px;
+	padding: 100px 0;
 }
 .nav {
 	width: 500px;
