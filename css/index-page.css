@@ -75,6 +75,16 @@ a:focus {
 	letter-spacing: 0.1em;
 }
 
+.header-name a:link {
+	color: #222;
+}
+.header-name a:visited {
+	color: #222;
+}
+.header-name a:hover {
+	color: #222;
+}
+
 .header-name:before,
 .header-name::before {
 	content: "";
@@ -83,7 +93,16 @@ a:focus {
 	left: calc(50% - 5px);
 	width: 20px;
 	height: 5px;
+	transform: rotate(-180deg);
+	transition: all .3s ease-in-out;
 	background: #222;
+}
+
+.header-name:hover:before,
+.header-name:hover::before {
+	/*background: #fff;*/
+	transform: rotate(180deg);
+	transition: all .3s ease-in-out;
 }
 
 /* MAIN */
@@ -92,12 +111,23 @@ a:focus {
 }
 
 .nav {
-	margin: 0 auto;
+	width: 500px;
+	margin: 30px auto;
+	text-align: center;
 }
 
 .main-menu > li {
 	font-size: 1.5rem;
-	position: relative;
+	display: inline-block;
+	/*margin-right: 3em;*/
+	letter-spacing: 0.1em;
+  width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.main-menu > li::first-letter {
+	text-transform: uppercase;
 }
 
 /*
