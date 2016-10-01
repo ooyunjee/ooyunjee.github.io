@@ -53,7 +53,7 @@ a:focus {
 }
 
 /* layout */
-.container {
+.container, .home {
   background: #ffffff;
 }
 
