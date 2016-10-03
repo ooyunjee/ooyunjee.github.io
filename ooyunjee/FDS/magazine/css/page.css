@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%; /* 16px */
+}
+
+/* 브라우저 스타일 초기화 */
+body {
+  margin: 0;
+  font: 1rem/1.5 "Spoqa Han Sans", sans-serif;
+}
+
+.David-Libre {
+  font-family: 'David Libre', serif;
+}
+
+/* module */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.reset-children-margin * {
+  margin: 0;
+}
+
+::selection {
+  background: #222;
+  color: #fff;
+}
+
+/*
+ * --------------------------------
+ * .magazine-photo-area
+ * ----------------------------- */
+
+ .magazine-photo-area {
+   float: left;
+   width: 45vw;
+   margin-right: 30px;
+   position: fixed;
+ }
+
+.magazine-headline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  background: #000;
+  color: #fff;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: 0 0;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.magazine-headline * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.magazine-headline p {
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  color: #fff0d8;
+}
+
+/*
+* width, height 중 하나의 값에
+* 다른 하나를 자동으로 비율 적용하는 방법
+*/
+.magazine-photo-area img {
+  width: auto;
+  height: 100vh;
+  margin-left: 99px;
+  vertical-align: top; /* 이미지 아래 여백 없앰 */
+}
+
+/*
+ * --------------------------------
+ * .magazine-contents
+ * ----------------------------- */
+
+.magazine-contents {
+  float: right;
+  width: 45vw;
+  padding: 5em 1em 1em 2em;
+  margin-right: 100px;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.col1 {
+  order: 1;
+}
+
+.col2 {
+  order: 2;
+}
+
+.magazine-contents-head img {
+  float: left;
+  position: relative;
+  top: -30px;
+  left: -36px;
+}
+
+.magazine-contents-head p {
+   font-size: 0.875rem;
+   padding-top: 3em;
+}
+
+.col1 {
+  padding: 4em 1em 1em 3.8em;
+  margin-right: 1em;
+}
+
+.col1 > img {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 20px;
+  font-size: 0.75rem;
+}
+
+.col2 {
+  font-size: 0.75rem;
+}
+
+.col2 p::first-line {
+  font-weight: bold;
+}
+
+/*
+ .dropcap::first-letter {
+   float: left;
+   margin-right: 15px;
+   font-size: 6rem;
+   font-weight: 700;
+   line-height: 0.9;
+ }*/
