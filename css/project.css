@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+
+.project-list li {
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	margin: 1em;
+	text-align: center;
+	cursor: pointer;
+}
