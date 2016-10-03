@@ -110,13 +110,6 @@ a:focus {
 	margin: 20em auto 0;
 	text-align: center;
 }
-/* END HEADER */
-
-/* MAIN */
-.main {
-	padding: 10rem 0;
-	border-top: 1px solid #eee;
-}
 
 .main-menu > li {
 	font-size: 1.5rem;
@@ -129,6 +122,17 @@ a:focus {
 
 .main-menu > li::first-letter {
 	text-transform: uppercase;
+}
+/* END HEADER */
+
+/* MAIN */
+.main {
+	padding: 10rem 0;
+	border-top: 1px solid #eee;
+}
+
+.main-subject {
+	text-align: center;
 }
 /* END MAIN */
 
