@@ -110,7 +110,7 @@ a:focus {
 	padding: 100px 0;
 }
 .nav {
-	width: 500px;
+	max-width: 500px;
 	margin: 30px auto;
 	text-align: center;
 }
@@ -128,53 +128,6 @@ a:focus {
 .main-menu > li::first-letter {
 	text-transform: uppercase;
 }
-
-/*
-.main-menu > li {
-	font-size: 1.5rem;
-	float: left;
-	position: relative;
-}
-
-.main-menu > li > a {
-	font-size: 1.5rem;
-	margin-right: 10px;
-	display: block;
-}
-
-.main-menu > li > a:hover,
-.main-menu > li > a:focus {
-	display: block;
-}
-
-.main-menu ul {
-	position: absolute;
-  top: 30px;
-}
-
-.homework {
-	left: 0;
-	display: none;
-}
-
-.lecture {
-	left: 0;
-	display: none;
-}
-
-.main-menu ul li,
-.main-menu ul a {
-  display: inline-block;
-}
-
-.main-menu ul a {
-  padding: 10px;
-}
-
-.main-menu > li > a:hover > ul,
-.main-menu > li > a:focus > ul {
-	display: block;
-}*/
 
 /* FOOTER */
 .footer {
