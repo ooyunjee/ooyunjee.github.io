@@ -65,7 +65,8 @@ a:focus {
 /* HEADER */
 .header {
   text-align: center;
-	padding: 10rem;
+	padding-top: 10rem;
+	padding-bottom: 2rem;
 }
 
 .header-name {
@@ -100,25 +101,26 @@ a:focus {
 
 .header-name:hover:before,
 .header-name:hover::before {
-	/*background: #fff;*/
 	transform: rotate(180deg);
 	transition: all .3s ease-in-out;
 }
 
+.nav {
+	max-width: 50em;
+	margin: 20em auto 0;
+	text-align: center;
+}
+/* END HEADER */
+
 /* MAIN */
 .main {
-	padding: 100px 0;
-}
-.nav {
-	max-width: 500px;
-	margin: 30px auto;
-	text-align: center;
+	padding: 10rem 0;
+	border-top: 1px solid #eee;
 }
 
 .main-menu > li {
 	font-size: 1.5rem;
 	display: inline-block;
-	/*margin-right: 3em;*/
 	letter-spacing: 0.1em;
   width: 100px;
 	text-align: center;
@@ -128,6 +130,7 @@ a:focus {
 .main-menu > li::first-letter {
 	text-transform: uppercase;
 }
+/* END MAIN */
 
 /* FOOTER */
 .footer {
