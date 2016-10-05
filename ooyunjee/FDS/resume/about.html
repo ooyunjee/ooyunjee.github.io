@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yunjee Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <style>
+  body, h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link {
+    color: #878994;
+  }
+  a:visited {
+    color: #878994;
+  }
+  a:hover {
+    color: #fff;
+  }
+  a:active {
+    color: #878994;
+    background: rgba(222, 153, 153, 0.44);
+    outline: 0;
+  }
+  a:focus {
+    color: #878994;
+    background: rgba(222, 153, 153, 0.44);
+    outline: 0;
+  }
+
+  .align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    background: #2a2c31;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 5em;
+    box-sizing: border-box;
+    color: #878994;
+    position: relative;
+  }
+
+  .resume-header {
+    margin-bottom: 5em;
+  }
+
+  .resume-name {
+    color: #878994;
+    font-size: 4em;
+    font-weight: normal;
+    margin-bottom: 0.2em;
+  }
+
+  .container span {
+    color: #afb1b5;
+    font-size: 1.4em;
+  }
+
+  /* MAIN */
+  .main {
+
+  }
+
+  .navigation {
+    border: 1px solid #878994;
+    display: inline-block;
+    float: right;
+  }
+
+  .navigation ul li{
+    margin: 2em;
+  }
+
+  .navigation ul li a {
+    padding: 0.3em;
+  }
+
+  .navigation ul li a:hover {
+    font: #fff;
+    font-size: 1.1em;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .box {
+    background: #de9999;
+    color: #fff;
+    width: 300px;
+    height: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20em;
+    /*margin-left: -150px;*/
+  }
+
+  .box a {
+    color: #fff;
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 3px solid #de9999;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .box a:after {
+    content: "";
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    border: 3px solid #2a2c31;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .box a:hover {
+    background: #fff;
+    color: #2a2c31;
+    border: 3px solid #fff;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .box a:hover::after {
+    content: "";
+    width: 314px;
+    height: 114px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 3px solid #fff;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* ABOUT */
+  .contact-list a {
+    padding-left: 1.5em;
+  }
+
+  /*.contact-list li a[href*="mailto"] { background: url(img/contact/logo-email.svg) no-repeat left 5px; background-size: 1em 1em; }*/
+  .contact-list li a[href*="instagram"] { background: url(img/contact/logo-instagram.svg) no-repeat left 5px; background-size: 1em 1em; }
+  .contact-list li a[href*="github"] { background: url(img/contact/logo-github.svg) no-repeat left 5px; background-size: 1em 1em; }
+  .contact-list li a:focus { background: rgba(222, 153, 153, 0.44);}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="resume-header">
+        <h1 class="resume-name"><a href="./resume.html">Yunjee Heo</a></h1>
+        <span>Front-end Developer</span>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li class="align-center"><a href="/">Skills</a></li>
+          <li class="align-center"><a href="./project.html">Projects</a></li>
+          <li class="align-center"><a href="./about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="like-list">
+        <h2 class="like">like</h2>
+        <ul>
+          <li>Reading</li>
+          <li>Writing</li>
+          <li>Watching</li>
+          <li>Coding</li>
+        </ul>
+      </div>
+      <div class="contact-list">
+        <h2 class="contact">contact</h2>
+        <ul>
+          <li><a href="mailto:heoyunjee@gmail.com?Subject=HelloWorld!">heoyunjee@gmail.com</a></li>
+          <li><a href="https://instagram.com/ooyunjee" target="_blank">@ooyunjee</a></li>
+          <li><a href="https://github.com/ooyunjee" target="_blank">github.com/ooyunjee</a></li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
