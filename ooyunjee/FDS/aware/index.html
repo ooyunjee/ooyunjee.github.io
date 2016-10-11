@@ -8,8 +8,30 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald|Varela+Round|PT+Serif" rel="stylesheet">
   <link rel="stylesheet" href="css/team.css">
   <link rel="stylesheet" href="css/grid.css">
+  <style>
+  .btn-toggle-grid {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 1rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.7rem 1.4rem;
+    background: #787878;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .btn-toggle-grid:hover {
+    background: #575656;
+  }
+  </style>
 </head>
 <body>
+  <button type="button" class="btn-toggle-grid">Toggle Grid</button>
   <a href="#main-contents" class="a11y">본문 바로가기</a>
   <div class="container">
     <h1 class="a11y">Aware Page</h1>
@@ -317,6 +339,6 @@
     </footer>
   </div>
 
-  <!-- <script src="js/team.js"></script> -->
+  <script src="js/team.js"></script>
 </body>
 </html>
