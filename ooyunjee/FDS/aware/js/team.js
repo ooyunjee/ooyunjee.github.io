@@ -1,14 +1,16 @@
-var container = document.querySelector('.container');
 var toggle_grid = document.querySelector('.btn-toggle-grid');
 
 function toggleGrid() {
-  var current_class = container.getAttribute('class');
-
-  if(current_class.indexOf('show-grid') == -1) {
-    container.setAttribute('class', current_class + ' show-grid');
-  } else {
-    var removed_class = current_class.replace('show-grid', ' ').trim();
-    container.setAttribute('class', removed_class);
+  var _container = document.querySelector('.container');
+  // 조건 검증
+  // _container 요소에 .show-grid 클래스가 있어?
+  // 있으면?
+  if ( _container.classList.contains('show-grid')  ) {
+    _container.classList.remove('show-grid');
+  }
+  // 없으면?
+  else {
+    _container.classList.add('show-grid');
   }
 }
 
