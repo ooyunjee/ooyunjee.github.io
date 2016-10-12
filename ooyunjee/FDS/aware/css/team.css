@@ -14,6 +14,10 @@ div, section, a, button, input, a:after {
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   display: inline;
   text-decoration: none;
@@ -768,48 +772,45 @@ a[class*="featured-"]:hover:after{
 /* END MAIN */
 
 /* FOOTER */
-.footer-1 {
+.footer-categories {
   height: 60px;
   background: #222;
   border-bottom: 1px solid #353535;
 }
-.footer-1 ul {
+.footer-categories ul {
   margin-left: 70px;
 }
-.footer-1 ul li {
+.footer-categories ul li {
   display: inline-block;
   padding-right: 35px;
   margin-right: 35px;
   background: url(../img/assets/icon-midel-point.png) no-repeat right 50%;
 }
-.footer-1 ul li:last-child {
+.footer-categories ul li:last-child {
   background: none;
 }
-.footer-1 li a {
+.footer-categories li a {
   text-transform: capitalize;
   color: #fff;
   font-size: 14px;
 }
+
+/* footer-2 : copyright, send-mail, sns, payments */
 .footer-2 {
   height: 120px;
   background: #222;
 }
 
-.copyright, .send-mail {
+/* copyright */
+.footer-copyright, .footer-send-mail {
   height: 120px;
   border-right: 1px solid #353535;
 }
-.sns, .payments {
-  height: 60px;
-  border-bottom: 1px solid #353535;
-}
-
-/* copyright */
-.copyright {
+.footer-copyright {
   padding: 30px 40px;
   text-align: center;
 }
-.copyright p {
+.footer-copyright p {
   color: #fff;
   opacity: 0.3;
   font-family: "PT Serif", sans-serif;
@@ -819,10 +820,13 @@ a[class*="featured-"]:hover:after{
 }
 
 /* send mail */
-.send-mail {
+.footer-send-mail {
   padding-top: 30px;
 }
 .sign-up-news {
+  position: relative;
+}
+.sign-up-news form {
   position: relative;
 }
 .sign-up-news fieldset {
@@ -843,36 +847,40 @@ a[class*="featured-"]:hover:after{
 }
 .sign-up-news button {
   position: absolute;
-  top: 10px;
-  right: 75px;
+  top: 9px;
+  right: 10px;
   background: #393939;
-  border: none;
-  cursor: pointer;
+  border: 0;
 }
 
-.send-mail ul {
+.footer-send-mail ul {
   margin-top: 20px;
 }
-.send-mail ul li:nth-child(1),
-.send-mail ul li:nth-child(2) {
+.footer-send-mail ul li:nth-child(1),
+.footer-send-mail ul li:nth-child(2) {
   display: inline-block;
   margin-right: 15px;
 }
-.sned-mail ul li:nth-child(3) {
+.footer-sned-mail ul li:nth-child(3) {
   margin-right: 0;
 }
-.send-mail ul a{
+.footer-send-mail ul a{
   color: #fff;
   font-size: 12px;
   opacity: 0.6;
 }
 
 /* sns, payments */
-.sns li {
+.footer-sns, .footer-payments {
+  height: 60px;
+  border-bottom: 1px solid #353535;
+}
+
+.footer-sns li {
   display: inline-block;
   margin: 0 15px;
 }
-.payments li {
+.footer-payments li {
   display: inline-block;
   margin: 0 10px;
 }
