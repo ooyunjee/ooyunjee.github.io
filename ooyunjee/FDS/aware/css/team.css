@@ -586,9 +586,12 @@ ul {
   top: 50%;
   left: 50%;
 }
-.testimonials-pagenation a:hover::before {
+.testimonials-pagenation a:hover:before {
   border: 2px solid #c9c9c9;
   background: #fff;
+  position: absolute;
+  top: -2px;
+  left: -2px;
 }
 
 .testimonials button {
@@ -792,6 +795,11 @@ ul {
 .sign-up-news {
   position: relative;
 }
+.sign-up-news fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
 .sign-up-news input {
   border: 0;
   width: 360px;
@@ -803,10 +811,13 @@ ul {
   font-family: "PT Serif", sans-serif;
   color: #fff;
 }
-.sign-up-news a {
+.sign-up-news button {
   position: absolute;
-  top: 11px;
+  top: 10px;
   right: 75px;
+  background: #393939;
+  border: none;
+  cursor: pointer;
 }
 
 .send-mail ul {

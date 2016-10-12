@@ -86,31 +86,34 @@
         <h1 class="a11y">Products</h1>
         <div class="sliders">
           <div class="main-slider">
+            <h2 class="a11y">Main Slider</h2>
             <div class="slider-contents">
               <span class="product-type">men</span>
               <h2>Replay Jeans Hyperflex</h2>
               <p>Skinny Comfort Ultra Stretch Light Wash</p>
-              <a href="#" class="buy-now" title="바로 사러가기">
+              <a role="button" href="#" class="buy-now" title="바로 사러가기">
                 <span class="buy-now-cost">$145</span>
                 <span class="buy-now-text">Buy now</span>
               </a>
             </div>
             <img src="img/assets/photo-slider-content.png" alt="" width="720" height="480">
-            <div class="slider-arrow-btns">
-              <a href="#" class="arrow-left"><img src="img/assets/icon-arrow-left.svg" alt="슬라이드 이전 사진 보기" ></a>
-              <a href="#" class="arrow-right"><img src="img/assets/icon-arrow-right.svg" alt="슬라이드 다음 사진 보기"></a>
+            <div class="slider-arrow-btns" role="group">
+              <a role="button" href="#" class="arrow-left"><img src="img/assets/icon-arrow-left.svg" alt="슬라이드 이전 사진 보기" ></a>
+              <a role="button" href="#" class="arrow-right"><img src="img/assets/icon-arrow-right.svg" alt="슬라이드 다음 사진 보기"></a>
             </div>
           </div>
           <div class="right-slider">
+            <h2 class="a11y">Right Slider</h2>
             <ul>
-              <li><a href="#"><img src="img/assets/photo-slider-slides-01.png" alt="" width="240" height="120" ></a></li>
-              <li><a href="#"><img src="img/assets/photo-slider-slides-03.png" alt=""></a></li>
-              <li><a href="#"><img src="img/assets/photo-slider-slides-02.png" alt=""></a></li>
-              <li><a href="#"><img src="img/assets/photo-slider-slides-04.png" alt=""></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-01.png" alt="right slider first image" width="240" height="120" ></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-03.png" alt="right slider second image"></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-02.png" alt="right slider third image"></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-04.png" alt="right slider last image"></a></li>
             </ul>
           </div>
         </div>
         <div class="banner row">
+          <h2 class="a11y">Banner</h2>
           <a href="#" class="banner-women col-4">
             <span class="product-type">women</span>
             <h2>Big Spring Sale - 70%</h2>
@@ -126,6 +129,7 @@
           </a>
         </div>
         <div class="featured row">
+          <h2 class="a11y">Featured</h2>
           <a href="#" class="featured-1 col-2">
             <img src="img/assets/icon-ruby.svg" alt="featured title ruby icon">
             <h2>Featured products</h2>
@@ -173,7 +177,7 @@
         </div>
       </section>
       <section class="blog row">
-        <h1 class="a11y">blog</h1>
+        <h1 class="a11y">Blog</h1>
         <a href="#" class="blog-1 col-2">
           <img src="img/assets/icon-news.svg" alt="">
           <h2>our blog</h2>
@@ -199,8 +203,9 @@
         </a>
       </section>
       <section class="testi-about row">
-        <h1 class="a11y">testimonials and about</h1>
+        <h1 class="a11y">Testimonials and About</h1>
         <div class="testimonials col-4">
+          <h2 class="a11y">Testimonial</h2>
           <div class="testimonials-header">
             <img src="img/assets/icon-chat-double.svg" alt="testimonials chat icon">
             <h2>What people say</h2>
@@ -225,6 +230,7 @@
           <button type="button" name="reload"></button>
         </div>
         <div class="about col-4">
+          <h2 class="a11y">About</h2>
           <div class="about-header">
             <img src="img/assets/icon-briefcase.svg" alt="">
             <h2>who we are</h2>
@@ -263,7 +269,7 @@
         </div>
       </section>
       <section class="brands row isolate">
-        <h1 class="a11y">brands</h1>
+        <h1 class="a11y">Brands</h1>
         <a href="#" class="brands-header col-1 order-8 align-center">
           <span>274</span>
           <span>all brands</span>
@@ -293,15 +299,18 @@
     </main>
     <footer class="footer">
       <div class="footer-1 col-8 align-center">
-        <ul>
-          <li><a href="#">men</a></li>
-          <li><a href="#">women</a></li>
-          <li><a href="#">kids</a></li>
-          <li><a href="#">accessories</a></li>
-          <li><a href="#">sale</a></li>
-          <li><a href="#">LookBook</a></li>
-          <li><a href="#">blog</a></li>
-        </ul>
+        <nav>
+          <h2 class="a11y">Footer navigation</h2>
+          <ul>
+            <li><a href="#">men</a></li>
+            <li><a href="#">women</a></li>
+            <li><a href="#">kids</a></li>
+            <li><a href="#">accessories</a></li>
+            <li><a href="#">sale</a></li>
+            <li><a href="#">LookBook</a></li>
+            <li><a href="#">blog</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="footer-2 col-8">
         <div class="copyright col-2">
@@ -310,9 +319,14 @@
         </div>
         <div class="send-mail col-4">
           <div class="sign-up-news align-center">
-            <label for="sign-up-news" class="a11y">Sign up</label>
-            <input type="text" placeholder="Sign up for style news" id="sign-up-news">
-            <a href="#"><img src="img/assets/icon-footer-arrow-right.svg" alt="send mail button"></a>
+            <form action="">
+              <fieldset>
+                <legend class="a11y">Sign up for style news</legend>
+                <label for="sign-up-news" class="a11y">Sign up</label>
+                <input type="text" placeholder="Sign up for style news" id="sign-up-news" required>
+                <button><img src="img/assets/icon-footer-arrow-right.svg" alt="send mail button"></button>
+              </fieldset>
+            </form>
           </div>
           <ul class="align-center">
             <li><a href="#">Privacy &amp; Cookies</a></li>
