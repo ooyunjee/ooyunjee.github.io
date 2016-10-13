@@ -30,4 +30,24 @@ function parallaxIt() {
   $fwindow.trigger('scroll');
 }
 
-parallaxIt();
+var width = 0;
+function updateWindowSize() {
+    if (document.body && document.body.offsetWidth) {
+      width = document.body.offsetWidth;
+    }
+    if (document.compatMode=='CSS1Compat' &&
+        document.documentElement &&
+        document.documentElement.offsetWidth ) {
+       width = document.documentElement.offsetWidth;
+    }
+    if (window.innerWidth) {
+       width = window.innerWidth;
+    }
+}
+
+updateWindowSize();
+console.log(width);
+
+if(width > 768) {
+  parallaxIt();
+}
