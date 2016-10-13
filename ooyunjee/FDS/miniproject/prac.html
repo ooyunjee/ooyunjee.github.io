@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
   <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/bd921c3741/UntitledProject/style.css"> -->
   <style media="screen">
-  @font-face {
+  /*@font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?b595fu');
   src:  url('fonts/icomoon.eot?b595fu#iefix') format('embedded-opentype'),
@@ -17,7 +17,7 @@
     url('fonts/icomoon.svg?b595fu#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+}*/
 
     /* RESET */
     body, div, p, h1, h2 {
@@ -81,29 +81,33 @@
     .nav h1 {
       font-style: italic;
       font-weight: lighter;
+      font-size: 25px;
     }
-    .nav ul {
+    .navigation {
+      position: absolute;
+      right: 0;
+    }
+    .navigation ul {
       list-style-type: none;
       padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
       margin-right: 30px;
     }
 
-    .nav ul li {
+    .navigation ul li {
       display: inline-block;
       color: #fff;
       margin: 0 15px;
+      font-weight: lighter;
     }
     .nav.nav_fixed ul li {
       color: #868686;
     }
 
-    .navigation {
-      position: absolute;
-      /*top: 0;*/
-      right: 0;
-    }
 
-    .nav-project:before {
+
+    /*.nav-project:before {
       content: '\e956';
       font-family: 'icomoon';
     }
@@ -114,7 +118,7 @@
     .nav-about:before {
       content: '\e971';
       font-family: 'icomoon';
-    }
+    }*/
 
     .wrap-cover {
       width: 100%;
@@ -175,13 +179,18 @@
 
     @media screen and (max-width: 768px) {
       .nav {
-        padding: 20px;
+        padding: 10px 20px;
+        height: 50px;
       }
-      .nav ul {
+      .nav h1 {
+        font-size: 20px;
+      }
+      .navigation ul {
         margin-right: 20px;
       }
-      .nav ul li {
-        margin: 0 10px;
+      .navigation ul li {
+        margin-left: 10px;
+        margin-right: 0;
       }
       .cover-cell {
         position: absolute;
@@ -202,9 +211,9 @@
       <nav class="navigation">
         <h1 class="a11y">Main Menu</h1>
         <ul class="main-menu">
-          <li><a href="https://ooyunjee.github.io/project.html" class="nav-project" title="go to projcet"></a></li>
-          <li><a href="https://ooyunjee.github.io/blog" class="nav-blog" title="go to blog"></a></li>
-          <li><a href="https://ooyunjee.github.io/blog/about" class="nav-about" title="go to about"></a></li>
+          <li><a href="https://ooyunjee.github.io/project.html" class="nav-project" title="go to projcet">project</a></li>
+          <li><a href="https://ooyunjee.github.io/blog" class="nav-blog" title="go to blog">blog</a></li>
+          <li><a href="https://ooyunjee.github.io/blog/about" class="nav-about" title="go to about">about</a></li>
         </ul>
       </nav>
     </div>
@@ -236,9 +245,6 @@
         $(".nav").addClass("nav_fixed");
       } else {
         $(".nav").removeClass("nav_fixed");
-        $(".cover-cell").css({
-          'opacity': 1
-        });
       }
 
       if(scroll>100) {
@@ -247,7 +253,7 @@
         });
       } else {
         $(".cover-cell").css({
-          'opacity': 100
+          'opacity': 1
         });
       }
 
