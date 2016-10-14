@@ -1,0 +1,141 @@
+/*@charset "UTF-8";*/
+/*@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?b595fu');
+  src:  url('fonts/icomoon.eot?b595fu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b595fu') format('truetype'),
+    url('fonts/icomoon.woff?b595fu') format('woff'),
+    url('fonts/icomoon.svg?b595fu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+/* RESET */
+body, div, p, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  background: hsla(0, 0%, 80%, 0.3);
+  color: #fff;
+}
+a:active {
+  color: #222;
+}
+a:focus {
+  color: #222;
+}
+
+/* MODULES */
+.a11y {
+  position: absolute;
+  top: -9999em;
+}
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.nav-project:before {
+  content: '\e956';
+  font-family: 'icomoon';
+}
+.nav-blog:before {
+  content: '\e908';
+  font-family: 'icomoon';
+}
+.nav-about:before {
+  content: '\e971';
+  font-family: 'icomoon';
+}*/
+
+/*.main {
+  width: 100%;
+  height: 100vh;
+}*/
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg/bg-7.jpg) no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+/*.main-image:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: #000;
+  opacity: 0.3;
+}*/
+
+.main-cell {
+  width: 100%;
+  /*height: 40vh;*/
+  padding-top: 100px;
+  height: 40vh;
+  box-sizing: border-box;
+  /*margin-top: 100px;*/
+  text-align: center;
+  color: #222;
+  background: rgba(235, 235, 235, 0.95);
+  /*opacity: 0.5;*/
+  position: relative;
+  top: 60vh;
+  z-index: 1000;
+  /*filter: blur(0);*/
+}
+.main-cell span {
+  font-weight: lighter;
+  border-bottom: 1px solid #fff;
+}
+.main-cell h2 {
+  font-size: 50px;
+  margin-top: 10px;
+}
+.main-cell p {
+  font-weight: lighter;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+.profile-img img {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-cell {
+    position: absolute;
+    bottom: 50%;
+  }
+  .main-cell h2 {
+    font-size: 30px;
+  }
+}
