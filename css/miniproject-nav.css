@@ -84,5 +84,6 @@ a:focus {
   .navigation ul li {
     margin-left: 10px;
     margin-right: 0;
+    font-weight: normal;
   }
 }
