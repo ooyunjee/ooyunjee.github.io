@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini Project</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <!-- <script src="../../Modules/JS/gs-utils.js"></script> -->
+  <link rel="stylesheet" href="css/grid-system-static.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/grid-system-fluid.css" media="screen" title="no title">
+  <!-- <link rel="stylesheet" href="../../Lecture/Modules/CSS/grid-system-fluid.css" media="screen" title="no title"> -->
+  <!-- <link rel="stylesheet" href="../../Lecture/Modules/CSS/grid-system-static.css" media="screen" title="no title"> -->
+  <!-- <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css" media="screen" title="no title"> -->
+  <link rel="stylesheet" href="css/miniproject-blog.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/miniproject-nav.css" media="screen" title="no title">
+</head>
+<body>
+  <a class="a11y" href="#content">본문 바로가기</a>
+  <div class="container1">
+    <div class="nav align-center">
+      <a href="miniproject.html"><h1>Yunjee</h1></a>
+      <nav class="navigation">
+        <h1 class="a11y">Main Menu</h1>
+        <ul class="main-menu">
+          <li><a href="miniproject-project.html" class="nav-project" title="go to projcet">project</a></li>
+          <li><a href="miniproject-blog.html" class="nav-blog" title="go to blog">blog</a></li>
+          <li><a href="miniproject-about.html" class="nav-about" title="go to about">about</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap-view-article">
+      <div class="wrap-cover">
+        <div class="wrap-item">
+          <div class="cover-image" data-type="background" data-speed="30"></div>
+          <div class="cover-cell">
+            <a href="#"><span>blog</span></a>
+            <h2>Posting about Front-End Develop</h2>
+            <p>HTML / CSS / JAVASCRIPT / FRAMEWORKS</p>
+          </div>
+        </div>
+      </div>
+      <div id="content" class="content">
+        <h2>Posts</h2>
+        <div class="container">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="js/miniproject.js" charset="utf-8"></script> -->
+  <script type="text/javascript">
+  $(window).load(function(){
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      var vh = $(window).height();
+
+      if (scroll >= (vh * 0.8)) {
+        $(".nav").addClass("nav_fixed");
+      } else {
+        $(".nav").removeClass("nav_fixed");
+      }
+
+      if(scroll>100) {
+        $(".cover-cell").css({
+          'opacity': 0.3
+        });
+      } else {
+        $(".cover-cell").css({
+          'opacity': 1
+        });
+      }
+
+    });
+   });
+  </script>
+</body>
+</html>

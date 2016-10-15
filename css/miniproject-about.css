@@ -71,86 +71,68 @@ a:focus {
 .main {
   width: 100%;
   height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.main-cover {
-  width: 100%;
-  height: 100vh;
-  background: url(../img/bg/bg-1.jpg) no-repeat;
+  background: url(../img/bg/bg-7.jpg) no-repeat;
   background-position: 50% 50%;
   background-attachment: fixed;
   background-size: cover;
-  filter: blur(20px);
-  transform: scale(1.2);
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
-
-.main-cover:before {
+/*.main-image:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: #5b5b5b;
-  opacity: 0.2;
-}
+  height: 60vh;
+  background: #000;
+  opacity: 0.3;
+}*/
 
 .main-cell {
   width: 100%;
-  /*padding-top: 100px;*/
   /*height: 40vh;*/
-  /*text-align: center;*/
+  padding-top: 100px;
+  height: 40vh;
+  box-sizing: border-box;
+  /*margin-top: 100px;*/
+  text-align: center;
   color: #222;
-  position: absolute;
-  top: 30vh;
+  background: rgba(235, 235, 235, 0.95);
+  /*opacity: 0.5;*/
+  position: relative;
+  top: 60vh;
   z-index: 1000;
-  display: block;
+  /*filter: blur(0);*/
+}
+.main-cell span {
+  font-weight: lighter;
+  border-bottom: 1px solid #fff;
+}
+.main-cell h2 {
+  font-size: 50px;
+  margin-top: 10px;
+}
+.main-cell p {
+  font-weight: lighter;
 }
 
 .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   position: absolute;
+  top: -50px;
   left: 0;
   right: 0;
   margin: 0 auto;
   border-radius: 100%;
   overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.5);
 }
-
 .profile-img img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
-
-.profile-cell {
-  color: #e9e9e9;
-  text-align: center;
-  margin-top: 100px;
-}
-
-.profile-cell p {
-  margin-bottom: 10px;
-}
-/*.profile-cell label {
-  display: block;
-  font-weight: lighter;
-}
-
-.profile-cell input {
-  background: #acacac;
-  opacity: 0.6;
-  border: 0;
-  padding: 0.9em 1.5em;
-  border-radius: 5px;
-  color: #eeeeee;
-  margin: 0.5em;
-  outline: 0;
-}*/
 
 @media screen and (max-width: 768px) {
   .main-cell {
