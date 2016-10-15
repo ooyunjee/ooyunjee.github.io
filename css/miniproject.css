@@ -135,6 +135,13 @@ a:focus {
 
 .profile-cell p {
   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.profile-cell a {
+  font-size: 50px;
+  font-weight: lighter;
 }
 /*.profile-cell label {
   display: block;

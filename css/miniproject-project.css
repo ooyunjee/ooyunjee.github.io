@@ -57,7 +57,7 @@ a:focus {
   margin-top: 0;
 }
 .cover-image {
-  height: 60vh;
+  height: 100vh;
   background: url(../img/bg/london.jpg);
   background-position: 50% 50%;
   background-size: cover;
@@ -99,7 +99,7 @@ a:focus {
   background: #fff;
   position: relative;
   z-index: 1000;
-  margin-top: 60vh;
+  margin-top: 100vh;
   padding-top: 100px;
 }
 .content h2 {
