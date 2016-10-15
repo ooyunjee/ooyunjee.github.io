@@ -57,7 +57,7 @@ a:focus {
   margin-top: 0;
 }
 .cover-image {
-  height: 90vh;
+  height: 60vh;
   background: url(../img/bg/london.jpg);
   background-position: 50% 50%;
   background-size: cover;
@@ -99,7 +99,7 @@ a:focus {
   background: #fff;
   position: relative;
   z-index: 1000;
-  margin-top: 90vh;
+  margin-top: 60vh;
   padding-top: 100px;
 }
 .content h2 {
@@ -182,7 +182,7 @@ a:focus {
 
 @media screen and (max-width: 768px) {
   .cover-image {
-    height: 100vh;
+    height: 70vh;
     background: url(../img/bg/london-mobile.jpg);
     background-position: 50% 50%;
     background-size: cover;
@@ -197,8 +197,7 @@ a:focus {
   .cover-cell h2 {
     font-size: 30px;
   }
-
-  .container {
-    width: 100%;
+  .content {
+    margin-top: 70vh;
   }
 }
