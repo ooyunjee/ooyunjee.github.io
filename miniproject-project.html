@@ -6,19 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mini Project</title>
   <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
-  <!-- <script src="../../Modules/JS/gs-utils.js"></script> -->
-  <link rel="stylesheet" href="css/grid-system-static.css" media="screen" title="no title">
-  <link rel="stylesheet" href="css/grid-system-fluid.css" media="screen" title="no title">
-  <!-- <link rel="stylesheet" href="../../Lecture/Modules/CSS/grid-system-fluid.css" media="screen" title="no title"> -->
-  <!-- <link rel="stylesheet" href="../../Lecture/Modules/CSS/grid-system-static.css" media="screen" title="no title"> -->
-  <!-- <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css" media="screen" title="no title"> -->
   <link rel="stylesheet" href="css/miniproject-project.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/miniproject-nav.css" media="screen" title="no title">
 </head>
 <body>
-  <a class="a11y" href="#content">본문 바로가기</a>
-  <div class="container1">
-    <div class="nav align-center">
+  <a class="a11y" href="#projects">본문 바로가기</a>
+  <div class="container">
+    <header class="nav align-center">
       <a href="index.html"><h1>Yunjee</h1></a>
       <nav class="navigation">
         <h1 class="a11y">Main Menu</h1>
@@ -28,21 +22,19 @@
           <li><a href="https://ooyunjee.github.io/blog/about" class="nav-about" title="go to about">about</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="wrap-view-article">
-      <div class="wrap-cover">
-        <div class="wrap-item">
-          <div class="cover-image" data-type="background" data-speed="30"></div>
-          <div class="cover-cell">
-            <a href="#"><span>project</span></a>
-            <h2>Fast Campus</h2>
-            <p>Front-end Develop</p>
-          </div>
+    </header>
+    <main class="main">
+      <div class="main-header">
+        <div class="cover-image" data-type="background" data-speed="30"></div>
+        <div class="cover-cell">
+          <a href="#"><span>project</span></a>
+          <h2>Fast Campus</h2>
+          <p>Front-end Develop</p>
         </div>
       </div>
-      <div id="content" class="content">
+      <div id="projects" class="projects">
         <h2>Projects</h2>
-        <div class="container">
+        <div class="projects-list">
           <div class="box">
             <a href="https://ooyunjee.github.io/ooyunjee/FDS/article/index.html">
               <img class="responsive-crop-content" src="img/project/project-article.png" alt="" />
@@ -99,7 +91,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
   </div>
   <!-- <script src="js/miniproject.js" charset="utf-8"></script> -->
   <script type="text/javascript">

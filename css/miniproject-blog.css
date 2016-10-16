@@ -51,11 +51,11 @@ ul {
   align-items: center;
 }
 
-.container1 {
+.container {
   letter-spacing: 1px;
 }
 
-.wrap-cover {
+.main-header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -71,7 +71,8 @@ ul {
   z-index: 0;
   position: relative;
 }
-.cover-image:before {
+.cover-image:before,
+.cover-image::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -99,7 +100,7 @@ ul {
 .cover-cell p {
   font-weight: lighter;
 }
-.content {
+.posts {
   width: 100%;
   background: #fff;
   position: relative;
@@ -108,7 +109,7 @@ ul {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.content h1 {
+.posts h1 {
   text-align: center;
   color: #575757;
 }
