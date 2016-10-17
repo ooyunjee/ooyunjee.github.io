@@ -35,11 +35,6 @@ a:focus {
   color: #222;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 /* MODULES */
 .a11y {
   position: absolute;
@@ -100,6 +95,10 @@ ul {
 .cover-cell p {
   font-weight: lighter;
 }
+
+/**
+ * posts
+ */
 .posts {
   width: 100%;
   background: #fff;
@@ -114,25 +113,57 @@ ul {
   color: #575757;
 }
 
+/* post list */
 .post-list {
-	margin-top: 4em;
+  margin-top: 4em;
 }
 
 .post-list li {
-	margin-top: 2em;
+  margin-top: 2em;
 }
 
 .post-meta {
-	font-size: 1rem;
-	color: #b6b6b6;
+  font-size: 1rem;
+  color: #b6b6b6;
 }
 
 .post-list h2 a {
-	font-size: 2rem;
+  font-size: 2rem;
   color: #494949;
 }
 
+/* post ( md file ) */
+.post {
+  padding-top: 100px;
+}
 
+.post-title {
+  font-size: 2em;
+}
+
+.post-meta {
+  text-align: center;
+}
+
+.post-content {
+  margin-top: 100px;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.post-content h1 {
+  font-size: 30px;
+}
+
+.post-content h3 {
+  margin-top: 100px;
+}
+
+.post-content blockquote {
+  background: hsla(0, 31%, 85%, 0.59);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
 
 @media screen and (max-width: 768px) {
   .cover-image {
