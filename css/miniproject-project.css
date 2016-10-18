@@ -120,6 +120,8 @@ a:focus {
 
 /* PROJCET LIST */
 .projects-list {
+  width: 80%;
+  margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 40px;
   position: relative;
