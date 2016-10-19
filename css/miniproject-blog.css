@@ -53,8 +53,7 @@ a:focus {
 
 .main-header {
   width: 100%;
-  position: fixed;
-  top: 0;
+  position: relative;
   margin-top: 0;
 }
 .cover-image {
@@ -79,7 +78,7 @@ a:focus {
   left: 0;
 }
 .cover-cell {
-  position: absolute;
+  position: fixed;
   top: 50vh;
   left: 100px;
   color: #fff;
@@ -206,9 +205,5 @@ footer span {
   .cover-cell h2 {
     font-size: 30px;
     padding-right: 2em;
-  }
-
-  .content {
-    margin-top: 100vh;
   }
 }
