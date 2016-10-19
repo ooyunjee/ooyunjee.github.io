@@ -12,7 +12,7 @@
 <body>
   <a class="a11y" href="#projects">본문 바로가기</a>
   <div class="container">
-    <header class="nav align-center">
+    <header class="header align-center">
       <a href="index.html"><h1>Yunjee</h1></a>
       <nav class="navigation">
         <h1 class="a11y">Main Menu</h1>
@@ -101,9 +101,9 @@
       var vh = $(window).height();
 
       if (scroll >= (vh * 0.8)) {
-        $(".nav").addClass("nav_fixed");
+        $(".header").addClass("header-fixed");
       } else {
-        $(".nav").removeClass("nav_fixed");
+        $(".header").removeClass("header-fixed");
       }
 
       if(scroll>100) {
