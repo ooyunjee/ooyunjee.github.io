@@ -6,66 +6,136 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mini Project</title>
   <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
-  <!-- <script src="../../Modules/JS/gs-utils.js"></script> -->
-  <!-- <link rel="stylesheet" href="css/grid-system-static.css" media="screen" title="no title"> -->
-  <!-- <link rel="stylesheet" href="css/grid-system-fluid.css" media="screen" title="no title"> -->
-  <!-- <link rel="stylesheet" href="../../Lecture/Modules/CSS/grid-system-fluid.css" media="screen" title="no title"> -->
-  <!-- <link rel="stylesheet" href="../../Lecture/Modules/CSS/grid-system-static.css" media="screen" title="no title"> -->
-  <!-- <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css" media="screen" title="no title"> -->
-  <link rel="stylesheet" href="css/miniproject-about.css" media="screen" title="no title">
+  <!-- <link rel="stylesheet" href="https://ooyunjee.github.io/css/miniproject-about.css" media="screen" title="no title"> -->
+  <link rel="stylesheet" href="css/Modules/grid-system-mobile-first-fix-count.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/miniproject-nav.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/miniproject-about.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/miniproject-fonts.css" media="screen" title="no title">
+  <!-- <link rel="stylesheet" href="https://ooyunjee.github.io/css/miniproject-nav.css" media="screen" title="no title"> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7lDv5ltbm7CfFAr3Xev696EGSOuHzbrY" type="text/javascript"></script>
+  <script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
+    function init() {
+      var mapOptions = {
+
+          zoom: 5,
+
+          // home: 37.5539829,126.9193599
+          center: new google.maps.LatLng(37.5539829,126.9193599),
+          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+      };
+
+      var mapElement = document.getElementById('map');
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(37.5539829,126.9193599),
+          map: map,
+          title: 'Snazzy!'
+      });
+    }
+  </script>
 </head>
 <body>
   <a class="a11y" href="#content">본문 바로가기</a>
-  <div class="container1">
-    <div class="nav align-center">
-      <a href="index.html"><h1>Yunjee</h1></a>
+  <div class="container">
+    <header class="header">
+      <a href="https://ooyunjee.github.io"><h1>Yunjee</h1></a>
       <nav class="navigation">
         <h1 class="a11y">Main Menu</h1>
         <ul class="main-menu">
-          <li><a href="miniproject-project.html" class="nav-project" title="go to projcet">project</a></li>
-          <li><a href="miniproject-blog.html" class="nav-blog" title="go to blog">blog</a></li>
-          <li><a href="miniproject-about.html" class="nav-about" title="go to about">about</a></li>
+          <li><a href="https://ooyunjee.github.io/miniproject-project.html" class="nav-project" title="go to projcet">project</a></li>
+          <li><a href="https://ooyunjee.github.io/blog" class="nav-blog" title="go to blog">blog</a></li>
+          <li><a href="https://ooyunjee.github.io/blog/about" class="nav-about" title="go to about">about</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="wrap-view-article">
-      <div class="main">
-        <div class="main-cell">
-          <h2>Yunjee Heo</h2>
-          <p>Front-end Developer</p>
+    </header>
+    <main class="main container">
+      <div class="row">
+        <div class="map column m-full t-3 d-4 t-prefix-1 d-prefix-2">
+          <div id="map" class="column m-full t-3 d-4"></div>
+        </div>
+        <div class="main-content column m-full t-3 d-4 align-center">
           <div class="profile-img">
-            <img src="img/profile/profile-1.jpg" alt="">
+            <img src="https://ooyunjee.github.io/img/profile/profile-1.jpg" alt="">
+          </div>
+          <div class="name">
+            <h2>Yunjee Heo</h2>
+            <span>Front-end Developer</span>
+          </div>
+          <div class="carousel-container">
+            <ul class="carousel">
+              <li class="slide showing">
+                <div class="lang align-center">
+                  <span>Languages</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Javascript</span>
+                </div>
+              </li>
+              <li class="slide">
+                <div class="quote align-center">
+                  <p>Grace under fire.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-group" role="group">
+              <button class="btn-prev" type="button" name="button"></button>
+              <button class="btn-next" type="button" name="button"></button>
+            </div>
+          </div>
+          <div class="sns-icons">
+            <a href="https://github.com/ooyunjee" target="_blank" title="yunjee's github"></a>
+            <a href="https://facebook.com/heoyunjee" target="_blank" title="yunjee's facebook"></a>
+            <a href="https://instagram.com/ooyunjee" target="_blank" title="yunjee's instagram"></a>
           </div>
         </div>
+
       </div>
-    </div>
+      <!-- <div class="main-cell">
+        <h2>Yunjee Heo</h2>
+        <p>Front-end Developer</p>
+        <div class="profile-img">
+          <img src="https://ooyunjee.github.io/img/profile/profile-1.jpg" alt="">
+        </div>
+      </div> -->
+
+      <!-- <div class="footer">
+        <div id="map"></div>
+      </div> -->
+
+    </main>
+    <footer>
+      <span>© heoyunjee</span>
+    </footer>
   </div>
   <!-- <script src="js/miniproject.js" charset="utf-8"></script> -->
   <script type="text/javascript">
-  $(window).load(function(){
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      var vh = $(window).height();
+   var carousel = document.querySelectorAll('.carousel .slide');
+   var currentSlide = 0;
+   // var slideInterval = setInterval(nextSlide,2000);
 
-      if (scroll >= (vh * 0.8)) {
-        $(".nav").addClass("nav_fixed");
-      } else {
-        $(".nav").removeClass("nav_fixed");
-      }
+   var btn_next = document.querySelector('.btn-next');
+   var btn_prev = document.querySelector('.btn-prev');
+   console.log(btn_next);
 
-      if(scroll>100) {
-        $(".cover-cell").css({
-          'opacity': 0.3
-        });
-      } else {
-        $(".cover-cell").css({
-          'opacity': 1
-        });
-      }
+   function goToSlide(n) {
+     carousel[currentSlide].setAttribute('class', 'slide');
+     currentSlide = (carousel.length + n) % carousel.length;
+     carousel[currentSlide].setAttribute('class', 'slide showing');
+   }
 
-    });
-   });
+   function nextSlide() {
+     goToSlide(currentSlide + 1);
+   }
+
+   function prevSlide() {
+     goToSlide(currentSlide - 1);
+   }
+
+   btn_next.onclick = nextSlide;
+   btn_prev.onclick = prevSlide;
+
   </script>
 </body>
 </html>
