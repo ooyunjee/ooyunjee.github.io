@@ -48,6 +48,7 @@ a:focus {
 
 .container {
   letter-spacing: 1px;
+  position: relative;
 }
 
 .main-header {
@@ -176,6 +177,16 @@ a:focus {
   background: hsla(0, 31%, 85%, 0.59);
   padding: 0.5em 1em;
   border-radius: 5px;
+}
+
+footer span {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  color: #222;
+  opacity: 0.7;
+  font-weight: lighter;
+  z-index: 1000;
 }
 
 @media screen and (max-width: 768px) {

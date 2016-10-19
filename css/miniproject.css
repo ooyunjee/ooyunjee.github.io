@@ -48,6 +48,7 @@ a:focus {
 
 .container {
   letter-spacing: 1px;
+  position: relative;
 }
 
 .main {
@@ -138,6 +139,15 @@ a:focus {
   margin: 0.5em;
   outline: 0;
 }*/
+
+footer span {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  color: #fefefe;
+  opacity: 0.7;
+  font-weight: lighter;
+}
 
 @media screen and (max-width: 768px) {
   .main-cell {
