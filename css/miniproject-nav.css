@@ -1,23 +1,22 @@
 @charset "UTF-8";
 
 a:link {
-  color: inherit;
+  color: #fefefe;
 }
 a:visited {
-  color: inherit;
+  color: #fefefe;
 }
 a:hover {
   background: hsla(0, 0%, 80%, 0.3);
-  color: #fff;
+  color: #fefefe;
 }
 a:active {
   background: hsla(0, 0%, 80%, 0.3);
-  color: #fff;
+  color: #fefefe;
 }
 a:focus {
   background: hsla(0, 0%, 80%, 0.3);
-  color: #fff;
-  outline: none;
+  color: #fefefe;
 }
 
 .header {
