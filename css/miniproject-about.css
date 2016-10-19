@@ -32,7 +32,7 @@ a:active, a:focus {
 }
 
 .container {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   position: relative;
 }
 
