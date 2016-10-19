@@ -196,10 +196,6 @@ a:active, a:focus {
   transition: color 0.3s ease-in-out;
 }
 
-.main-content .btn-group button:focus, .main-content .btn-group button:active {
-  outline: 0;
-}
-
 .name {
   text-align: center;
 }
@@ -266,7 +262,6 @@ a:active, a:focus {
   display: block;
   text-align: center;
   font-size: 1.5em;
-  font-weight: lighter;
   color: #fefefe;
 }
 
@@ -275,6 +270,24 @@ a:active, a:focus {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+}
+
+.quote p q::before {
+  content: '\e977';
+  font-family: 'icomoon' !important;
+  font-size: 0.5em;
+  position: relative;
+  top: -1em;
+  left: -0.5em;
+}
+
+.quote p q::after {
+  content: '\e978';
+  font-family: 'icomoon' !important;
+  font-size: 0.5em;
+  position: relative;
+  top: -1em;
+  right: -0.5em;
 }
 
 .lang {
@@ -343,5 +356,3 @@ footer span {
   opacity: 0.7;
   font-weight: lighter;
 }
-
-/*# sourceMappingURL=../map/miniproject-about.css.map */
