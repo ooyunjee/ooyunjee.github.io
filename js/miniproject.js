@@ -1,76 +1,44 @@
-// makes the parallax elements
-function parallaxIt() {
-  // create variables
-  var $fwindow = $(window);
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+var btn_nav_toggle = document.querySelector('.nav-toggle');
+var navigation = document.querySelector('.navigation');
+var btn_pressed = false;
 
-  // on window scroll event
-  $fwindow.on('scroll resize', function() {
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  });
+btn_nav_toggle.onclick = function() {
+  console.log('clicked');
+  if(btn_pressed===false) {
+    navigation.classList.add('navigation-mobile');
+    btn_pressed = true;
+  } else if(btn_pressed===true) {
+    navigation.classList.remove('navigation-mobile');
+    btn_pressed = false;
+  }
 
-  // for each of background parallax element
-  $('[data-type="background"]').each(function(){
-    var $backgroundObj = $(this);
-    var bgOffset = parseInt($backgroundObj.offset().top);
-    var yPos;
-    var coords;
-    var speed = ($backgroundObj.data('speed') || 0 );
+};
 
-    $fwindow.on('scroll resize', function() {
-      yPos = - ((scrollTop - bgOffset) / speed);
-      coords = '50% '+ yPos + 'px';
+var bg_colors = [['#ff6e7f', '#bfe9ff'],
+                 ['#3a6186', '#89253e'],
+                 ['#BE93C5', '#7BC6CC'],
+                 ['#bdc3c7', '#2c3e50'],
+                 ['#42275a', '#734b6d'],
+                 ['#141E30', '#243B55'],
+                 ['#2C3E50', '#FD746C'],
+                 ['#904e95', '#e96443'],
+                 ['#1D4350', '#A43931'],
+                 ['#F4E2D8', '#BA5370'],
+                 ['#000000', '#434343']];
 
-      $backgroundObj.css({ backgroundPosition: coords });
-    });
-  });
+var btn_bg = document.querySelector('.btn-bg');
+var main = document.querySelector('.main');
 
-  // triggers winodw scroll for refresh
-  $fwindow.trigger('scroll');
-}
-
-var width = 0;
-function updateWindowSize() {
-    if (document.body && document.body.offsetWidth) {
-      width = document.body.offsetWidth;
-    }
-    if (document.compatMode=='CSS1Compat' &&
-        document.documentElement &&
-        document.documentElement.offsetWidth ) {
-       width = document.documentElement.offsetWidth;
-    }
-    if (window.innerWidth) {
-       width = window.innerWidth;
-    }
-}
-
-updateWindowSize();
-console.log(width);
-
-if(width > 768) {
-  parallaxIt();
-}
-
-$(window).load(function(){
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var vh = $(window).height();
-
-    if (scroll >= vh) {
-      $(".nav").addClass("nav_fixed");
+var index = 0;
+function bgColorRandom() {
+  btn_bg.onclick = function() {
+    if(index < bg_colors.length) {
+      var bg = 'linear-gradient(-35deg, ' + bg_colors[index][0] + ', ' + bg_colors[index][1] + ')';
+      main.style.background = bg;
+      index++;
     } else {
-      $(".nav").removeClass("nav_fixed");
+      index = 0;
     }
-
-    if(scroll>100) {
-      $(".cover-cell").css({
-        'opacity': 0.3
-      });
-    } else {
-      $(".cover-cell").css({
-        'opacity': 1
-      });
-    }
-
-  });
- });
+  };
+}
+bgColorRandom();
