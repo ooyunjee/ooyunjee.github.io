@@ -744,23 +744,19 @@ a[class*="featured-"]:hover:after{
 .brands-header {
   border-right: 0;
   position: relative;
-  /*background: #fff url(../img/assets/icon-274.png) no-repeat center;
-  background-size: auto;*/
 }
 .brands-header span {
   position: absolute;
-}
-.brands-header span:nth-child(1) {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+}
+.brands-header span:nth-child(1) {
   color: #000;
   opacity: 0.1;
   font-size: 60px;
   font-weight: bolder;
 }
 .brands-header span:nth-child(2) {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #1f4ba5;
   font-weight: bold;
