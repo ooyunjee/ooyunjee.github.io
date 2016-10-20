@@ -269,24 +269,29 @@ a:active, a:focus {
   .quote p {
     margin-top: 1em;
     margin-bottom: 1em;
+    font-size: 1.2em;
   }
 }
 
-.quote p q::before {
+.quote p q::before, .quote p q::after {
   content: '\e977';
   font-family: 'icomoon' !important;
   font-size: 0.5em;
   position: relative;
   top: -1em;
+}
+
+@media screen and (max-width: 50em) {
+  .quote p q::before, .quote p q::after {
+    font-size: 0.3em;
+  }
+}
+
+.quote p q::before {
   left: -0.5em;
 }
 
 .quote p q::after {
-  content: '\e978';
-  font-family: 'icomoon' !important;
-  font-size: 0.5em;
-  position: relative;
-  top: -1em;
   right: -0.5em;
 }
 
@@ -308,7 +313,7 @@ a:active, a:focus {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .sns-icons img {
