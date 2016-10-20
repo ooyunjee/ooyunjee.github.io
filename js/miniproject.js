@@ -14,6 +14,39 @@ btn_nav_toggle.onclick = function() {
 
 };
 
+var carousel = document.querySelectorAll('.carousel .slide');
+var currentSlide = 0;
+// var slideInterval = setInterval(nextSlide,2000);
+
+var btn_next = document.querySelector('.btn-next');
+var btn_prev = document.querySelector('.btn-prev');
+console.log(btn_next);
+
+function goToSlide(n) {
+  carousel[currentSlide].setAttribute('class', 'slide');
+  currentSlide = (carousel.length + n) % carousel.length;
+  carousel[currentSlide].setAttribute('class', 'slide showing');
+}
+
+function nextSlide() {
+  goToSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  goToSlide(currentSlide - 1);
+}
+
+btn_next.onclick = nextSlide;
+btn_prev.onclick = prevSlide;
+
+document.onkeydown = function(event) {
+  if ( event.keyCode === 37 ) {
+    prevSlide();
+  } else if ( event.keyCode === 39 ) {
+    nextSlide();
+  }
+};
+
 var bg_colors = [['#ff6e7f', '#bfe9ff'],
                  ['#3a6186', '#89253e'],
                  ['#BE93C5', '#7BC6CC'],
