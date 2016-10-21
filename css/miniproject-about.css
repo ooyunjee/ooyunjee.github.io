@@ -273,26 +273,23 @@ a:active, a:focus {
   }
 }
 
-.quote p q::before, .quote p q::after {
+.quote p q::before {
   content: '\e977';
   font-family: 'icomoon' !important;
   font-size: 0.5em;
   position: relative;
   top: -1em;
+  left: -0.5em;
 }
 
 @media screen and (max-width: 50em) {
-  .quote p q::before, .quote p q::after {
+  .quote p q::before {
     font-size: 0.3em;
   }
 }
 
-.quote p q::before {
-  left: -0.5em;
-}
-
 .quote p q::after {
-  right: -0.5em;
+  display: none;
 }
 
 .lang {
@@ -361,3 +358,5 @@ footer span {
   opacity: 0.7;
   font-weight: lighter;
 }
+
+/*# sourceMappingURL=../map/miniproject-about.css.map */
