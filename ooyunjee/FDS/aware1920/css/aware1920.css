@@ -87,6 +87,8 @@ header, main, footer { -webkit-box-sizing: border-box; -moz-box-sizing: border-b
 
 .main-slider .main-slider-content a { width: 102px; height: 30px; background: #1f4ba5; border-radius: 50px; color: #fff; font-size: 12px; line-height: 30px; text-align: center; margin-top: 36px; }
 
+.main-slider .main-slider-content a:hover { background: none; color: #1f4ba5; border: 2px solid #1f4ba5; line-height: 28px; }
+
 .main-slider .slider-arrow-btns { position: absolute; top: 50%; width: 100%; padding-left: 30px; padding-right: 30px; }
 
 .main-slider .slider-arrow-btns .arrow-left { float: left; }
