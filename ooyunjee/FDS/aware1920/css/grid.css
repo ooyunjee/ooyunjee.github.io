@@ -1,0 +1,85 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.container.adaptive {
+  width: 1920px;
+  background: #fff;
+}
+.container.adaptive.show-grid {
+  position: relative;
+}
+.container.adaptive.show-grid::before {
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, hsla(0, 0%, 85%, 0.3) 50%, hsla(0, 0%, 61%, 0.75) 50%);
+  background-size: 12.5% 1px;
+}
+
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+[class*="t-"] { float: left; }
+
+.t-1 { width: 240px; }
+.t-2 { width: 480px; }
+.t-3 { width: 720px; }
+.t-4 { width: 960px; }
+.t-5 { width: 1200px; }
+.t-6 { width: 1440px; }
+.t-7 { width: 1680px; }
+.t-full { width: 1920px; }
+
+.t-prefix-1 { margin-left: 12.5%; }
+.t-prefix-2 { margin-left: 25%; }
+.t-prefix-3 { margin-left: 37.5%; }
+.t-prefix-4 { margin-left: 50%; }
+.t-prefix-5 { margin-left: 62.5%; }
+.t-prefix-6 { margin-left: 75%; }
+.t-prefix-7 { margin-left: 87.5%; }
+
+.t-suffix-1 { margin-right: 12.5%; }
+.t-suffix-2 { margin-right: 25%; }
+.t-suffix-3 { margin-right: 37.5%; }
+.t-suffix-4 { margin-right: 50%; }
+.t-suffix-5 { margin-right: 62.5%; }
+.t-suffix-6 { margin-right: 75%; }
+.t-suffix-7 { margin-right: 87.5%; }
+
+.t-push-1 { left: 12.5%; }
+.t-push-2 { left: 25%; }
+.t-push-3 { left: 37.5%; }
+.t-push-4 { left: 50%; }
+.t-push-5 { left: 62.5%; }
+.t-push-6 { left: 75%; }
+.t-push-7 { left: 87.5%; }
+
+.t-pull-1 { right: 12.5%; }
+.t-pull-2 { right: 25%; }
+.t-pull-3 { right: 37.5%; }
+.t-pull-4 { right: 50%; }
+.t-pull-5 { right: 62.5%; }
+.t-pull-6 { right: 75%; }
+.t-pull-7 { right: 87.5%; }
+
+.t-hidden { display: none; }
+
+/* isolate */
+/*.row.isolate [class*="t-"] {
+  margin-right: -100%;
+}
+.row.isolate .order-1    { margin-left: 0px;  }
+.row.isolate .order-2    { margin-left: 120px;  }
+.row.isolate .order-3    { margin-left: 240px;  }
+.row.isolate .order-4    { margin-left: 360px;  }
+.row.isolate .order-5    { margin-left: 480px;  }
+.row.isolate .order-6    { margin-left: 600px;  }
+.row.isolate .order-7    { margin-left: 720px;  }
+.row.isolate .order-8    { margin-left: 840px;  }*/

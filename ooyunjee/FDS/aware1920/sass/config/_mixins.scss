@@ -1,0 +1,49 @@
+@mixin reset-img {
+  vertical-align: top;
+  border: 0;
+}
+
+@mixin reset-list {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin reset-box-model {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-anchor {
+  display: inline;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin reset-button {
+  cursor: pointer;
+  border: 0;
+}
+
+@mixin box-sizing($origin) {
+  -webkit-box-sizing: $origin;
+  -moz-box-sizing: $origin;
+  // -o-box-sizing: $origin;
+  -ms-box-sizing: $origin;
+  box-sizing: $origin;
+}
+
+@mixin reset-input {
+  border: 0;
+}
+
+@mixin flexbox($flow: row, $justify: null, $align-items: null) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: $align-items;
+}

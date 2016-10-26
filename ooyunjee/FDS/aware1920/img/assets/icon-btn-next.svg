@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4d4d4d;
+        fill-rule: evenodd;
+        opacity: 0.3;
+      }
+    </style>
+  </defs>
+  <path id="icon-btn-next.svg" class="cls-1" d="M147.514,827.605l0,0a1.5,1.5,0,1,1-2.022-2.2l0,0L150.28,821l-4.794-4.395,0,0a1.5,1.5,0,1,1,2.022-2.2l0,0,6,5.5a1.5,1.5,0,0,1,0,2.211Z" transform="translate(-145 -814)"/>
+</svg>
