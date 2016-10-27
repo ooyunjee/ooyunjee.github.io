@@ -8,7 +8,7 @@ body, h1, h2, h3, p, div, a { margin: 0; padding: 0; -webkit-box-sizing: border-
 
 .main-slider .main-slider-content span, .main-banner .product-type, .header-btns .shopping-cart-cost, .main-banner .main-banner-2, .most-loved .most-loved-1 h2, .most-loved a.col-2 span, .banner2 .banner2-1 span, .banner2 .banner2-2 span, .blog .blog-1 h2, .blog .blog-author span, .featured .featured-1 h2, a[class*="featured-"] .sale, a[class*="featured-"] .new, a[class*="featured-"] .hit, .featured-cost, .featured-sale-cost, .brands .brands-header span, .sign-up .sign-up-content { font-family: "Oswald", sans-serif; text-transform: uppercase; }
 
-.blog .blog-date, .blog .blog-author, .sign-up form input { font-family: "PT Serif", sans-serif; font-style: italic; }
+.header form input, .blog .blog-date, .blog .blog-author, .sign-up form input { font-family: "PT Serif", sans-serif; font-style: italic; }
 
 .main-slider .main-slider-content span, .main-banner .product-type { color: #1f4ba5; font-size: 12px; letter-spacing: 0.1em; font-weight: bold; }
 
