@@ -47,3 +47,21 @@
   justify-content: $justify;
   align-items: $align-items;
 }
+
+@mixin transition {
+
+}
+
+@mixin position($position, $args) {
+	position: $position;
+
+	@if $args != null {
+		@each $dir in top, left, bottom, right, z-index {
+			$i: index($args, $dir);
+
+			@if $i {
+				#{$dir}: nth($args, $i + 1);
+			}
+		}
+	}
+}

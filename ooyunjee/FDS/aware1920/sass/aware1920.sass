@@ -27,9 +27,7 @@
 %anchor-card-hover
   &:hover::after
     content: ''
-    position: absolute
-    top: 0
-    left: 0
+    @include position(absolute, top 0 left 0)
     width: 100%
     height: 100%
     background: #fff
@@ -59,11 +57,8 @@ a
   &:focus,
   &:active
     color: inherit
-
-ul
-  @include reset-list
-li
-  display: inline-block
+  &:hover
+    transition: all 0.3s ease-in-out
 
 input
   @include reset-input
@@ -92,6 +87,10 @@ footer
   height: 1700px
   font-family: "Varela Round", sans-serif
   color: #222
+  transition: all 0.3s ease-in-out
+  margin-left: 0
+  &.drawer
+    margin-left: 300px
 
 /* HEADER */
 .header
@@ -99,6 +98,7 @@ footer
   height: 80px
   background: #fff
   padding: 30px
+  position: relative
   form
     display: inline-block
     position: relative
@@ -118,25 +118,45 @@ footer
       background: transparent
       width: 16px
       height: 16px
-      position: absolute
-      top: 7px
-      right: 10px
+      @include position(absolute, top 7px right 10px)
   .header-location
     font-size: 12px
     color: #868686
     margin-right: 65px
-  .hamberger-img
+  .hamburger-img
+    position: relative
+    z-index: 200
     margin-right: 35px
-
   .logo-img
     margin-right: 60px
+
+.sidebar
+  @include position(fixed, top 0 left 0)
+  width: 300px
+  height: 1700px
+  background: #9d9d9d
+  z-index: 100
+  transition: width 0.3s ease-in-out
+  &.hide
+    width: 0
+    .sidebar-menu
+      display: none
+  .sidebar-menu
+    @include reset-list
+    padding: 1em
+    display: blocks
+    color: #fff
+    .sidebar-sub-menu
+
 
 /* nav */
 .nav
   display: inline-block
 
 .main-menu
+  @include reset-list
   li
+    display: inline-block
     padding-right: 40px
     &:last-child
       padding-right: 0
@@ -158,18 +178,15 @@ footer
   .shopping-cart
     position: relative
     margin-right: 10px
-    &::after
-      content: "3"
-      @include flexbox($justify: center, $align-items: center)
-      width: 16px
-      height: 16px
-      border-radius: 15px
-      background: #1f4ba5
-      font-size: 9px
-      color: #fff
-      position: absolute
-      top: -10px
-      right: -10px
+  .shopping-cart-tag
+    @include flexbox($justify: center, $align-items: center)
+    @include position(absolute, top -10px right -10px)
+    width: 16px
+    height: 16px
+    border-radius: 15px
+    background: #1f4ba5
+    font-size: 9px
+    color: #fff
   .shopping-cart-cost
     @extend %font-oswald
     font-size: 12px
@@ -183,13 +200,12 @@ footer
   position: relative
   height: 480px
   background: #eee
+  overflow: hidden
   img
     width: 100%
     height: auto
   .main-slider-content
-    position: absolute
-    top: 0
-    left: 0
+    @include position(absolute, top 0 left 0)
     margin-left: 480px
     height: 100%
     flex-flow: column
@@ -208,30 +224,45 @@ footer
       width: 102px
       height: 30px
       background: #1f4ba5
+      border: 2px solid #1f4ba5
       border-radius: 50px
       color: #fff
       font-size: 12px
-      line-height: 30px
+      line-height: 26px
       text-align: center
       margin-top: 36px
       &:hover
         background: none
         color: #1f4ba5
         border: 2px solid #1f4ba5
-        line-height: 28px
+  .slide
+    opacity: 0
+    position: absolute
+    // animation: move 1s ease-in-out 0.5s 2 alternate
+    transition: all 0.2s ease-in-out
+    &.showing
+      opacity: 1
+      z-index: 2
 
   .slider-arrow-btns
-    position: absolute
-    top: 50%
+    @include position(absolute, top 50%)
+    z-index: 10
     width: 100%
     padding:
       left: 30px
       right: 30px
-    .arrow-left
+    .btn-prev
+      background: transparent
       float: left
-    .arrow-right
+    .btn-next
+      background: transparent
       float: right
 
+// @keyframes move
+//    from
+//       transform: translateX(0)
+//    to
+//       transform: translateX(100%)
 
 /* main banner */
 .main-banner
@@ -272,10 +303,9 @@ footer
       margin-top: 10px
       font-size: 16px
   .main-banner-4
+    @include position(absolute, right 0)
     background: url(../img/assets/photo-main-banner-4.png) no-repeat
     height: 480px
-    position: absolute
-    right: 0
     h2
       margin-top: 350px
       font-size: 16px
@@ -331,8 +361,7 @@ footer
     .pagination
       position: relative
       span
-        position: absolute
-        top: 0
+        @include position(absolute, top 0)
         font-size: 5px
 
   a.col-2
@@ -340,17 +369,13 @@ footer
       border: 0
     @extend %anchor-card-hover
     h3
-      position: absolute
-      top: 30px
-      left: 30px
-      right: 30px
+      @include position(absolute, top 30px left 30px right 30px)
       text-align: center
       font-size: 12px
     span
       @extend %font-oswald
+      @include position(absolute, bottom 30px)
       font-size: 12px
-      position: absolute
-      bottom: 30px
       &.sale,
       &.new,
       &.hit
@@ -385,10 +410,9 @@ footer
     position: relative
     span
       @extend %font-oswald
+      @include position(absolute, right 30px)
       font-size: 14px
       letter-spacing: 0.1em
-      position: absolute
-      right: 30px
     .banner2-year
       right: 0
       left: 40px
@@ -404,8 +428,7 @@ footer
   .banner2-2
     background: url(../img/assets/photo-banner2-2.png) no-repeat
     .banner2-2--btns
-      position: absolute
-      right: 40px
+      @include position(absolute, right 40px)
       text-align: center
       a
         width: 120px
@@ -552,12 +575,11 @@ a[class*="featured-"]
   .new,
   .hit
     @extend %font-oswald
+    @include position(absolute, top 200px)
     color: #fff
     text-align: left
     font-size: 10px
     width: 30px
-    position: absolute
-    top: 200px
     padding-left: 0.3em
   .sale
     background: url("../img/assets/icon-sale.svg") no-repeat
@@ -571,21 +593,16 @@ a[class*="featured-"]
 
 .featured-cost
   @extend %font-oswald
+  @include position(absolute, top 200px left 0 right 0)
   font-size: 12px
-  position: absolute
-  top: 200px
-  left: 0
-  right: 0
   margin: 0 auto
 
 .featured-sale-cost
   @extend %font-oswald
+  @include position(absolute, top 200px right 35px)
   font-size: 8px
   color: #a1a1a1
   text-decoration: line-through
-  position: absolute
-  top: 200px
-  right: 35px
 
 /* brands */
 .brands
@@ -631,11 +648,9 @@ $sign-up-input-height: 30px
   form
     position: relative
     .sign-up-btn
-      position: absolute
+      @include position(absolute, top 0 right 5px)
       width: 30px
       height: $sign-up-input-height
-      top: 0
-      right: 5px
       background: transparent
       padding: 0
     input
@@ -670,11 +685,18 @@ $sign-up-input-height: 30px
   .footer-copyright
     opacity: 0.3
   .footer-links
-    opacity: 0.5
+    @include reset-list
     li
+      display: inline-block
       margin-right: 15px
       &:last-child
         margin-right: 0
+      a
+        opacity: 0.5
+        &:hover, &:focus
+          opacity: 0.8
   .footer-payment
+    @include reset-list
     li
+      display: inline-block
       margin-right: 20px
