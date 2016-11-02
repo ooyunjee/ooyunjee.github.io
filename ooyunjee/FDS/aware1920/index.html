@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aware 1920</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald%7CVarela+Round%7CPT+Serif" rel="stylesheet">
-  <link rel="stylesheet" href="css/aware1920.css">
   <link rel="stylesheet" href="css/grid-system-sass.css">
+  <link rel="stylesheet" href="css/aware1920.css">
 </head>
 <body>
   <div class="container adaptive">
     <h1 class="a11y">Aware 1920 Page</h1>
-    <header class="header col-16">
-      <a href="#" class="hamberger-img"><img src="img/assets/icon-hamberger.svg" alt="hamberger menu"></a>
+    <a href="#main-content" class="a11y" lang="ko">본문 바로가기</a>
+    <header class="header col-16 drawer">
+      <a href="#" class="hamburger-img"><img src="img/assets/icon-hamburger.svg" alt="hamburger menu"></a>
       <a href="team-activity.html" class="logo-img"><img src="img/assets/icon-logo-aware.svg" alt="page logo"></a>
       <nav class="nav">
         <h2 class="a11y">main menu</h2>
@@ -61,7 +62,7 @@
           </li>
         </ul>
       </nav>
-      <form action="">
+      <form action="javascript: alert();">
         <label for="header-search" class="a11y">Search</label>
         <input type="text" placeholder="Search" id="header-search" required>
         <button name="search" class="header-search-btn"><img src="img/assets/icon-search.svg" alt="Search"></button>
@@ -69,24 +70,78 @@
       <img src="img/assets/icon-location-pin.svg" alt="사용자 설정 아이콘">
       <span class="header-location">Uzbekistan / $</span>
       <div class="header-btns clearfix">
-        <a href="#" class="shopping-cart" lang="ko" title="장바구니 담기"><img src="img/assets/icon-bag.svg" alt="장바구니 아이콘"></a>
+        <a href="#" class="shopping-cart" lang="ko" title="장바구니 담기">
+          <img src="img/assets/icon-bag.svg" alt="장바구니 아이콘">
+          <span class="shopping-cart-tag">3</span>
+        </a>
         <span class="shopping-cart-cost">$165</span>
         <a href="#" class="user-setting" lang="ko" title="설정하기"><img src="img/assets/icon-face.svg" alt="사용자 설정 아이콘"></a>
       </div>
     </header>
-    <main class="main">
+    <div class="sidebar hide">
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#">men</a>
+          <ul class="sidebar-sub-menu">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">women</a>
+          <ul class="sidebar-sub-menu">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">kids</a>
+          <ul class="sidebar-sub-menu">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">accessories</a>
+          <ul class="sidebar-sub-menu">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <main id="main-content" class="main">
       <section class="main-slider col-8">
         <h1 class="a11y">main slider</h1>
-        <img src="img/assets/photo-main-slider.png" alt="">
-        <div class="main-slider-content col-3 align-center">
-          <span>accessories</span>
-          <h2>Big sunglasses for men</h2>
-          <p>Let me be clear. Not even close. We did not go by choice, we went because of necessity.</p>
-          <a href="#">Shop now</a>
+        <div class="slide showing">
+          <img src="img/assets/photo-main-slider.png" alt="">
+          <div class="main-slider-content col-3 align-center">
+            <span>accessories</span>
+            <h2>Big sunglasses for men</h2>
+            <p>Let me be clear. Not even close. We did not go by choice, we went because of necessity.</p>
+            <a href="#">Shop now</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/assets/photo-slider-content.png" alt="">
+          <div class="main-slider-content col-3 align-center">
+            <span>men</span>
+            <h2>Replay Jeans Hyperflex</h2>
+            <p>Skinny Comfort Ultra Stretch Light Wash</p>
+            <a href="#">Shop now</a>
+            <!-- <a href="#" class="buy-now" title="바로 사러가기" role="group"> -->
+              <!-- <span class="buy-now-cost">$145</span> -->
+              <!-- <span class="buy-now-text">Buy now</span> -->
+            <!-- </a> -->
+          </div>
         </div>
         <div class="slider-arrow-btns" role="group">
-          <a href="#" class="arrow-left"><img src="img/assets/icon-arrow-left.svg" alt="슬라이드 이전 사진 보기" ></a>
-          <a  href="#" class="arrow-right"><img src="img/assets/icon-arrow-right.svg" alt="슬라이드 다음 사진 보기"></a>
+          <button type="button" class="btn-prev"><img src="img/assets/icon-arrow-left.svg" alt="슬라이드 이전 사진 보기" ></button>
+          <button type="button" class="btn-next"><img src="img/assets/icon-arrow-right.svg" alt="슬라이드 다음 사진 보기"></button>
         </div>
       </section>
       <section class="main-banner col-8 row">
@@ -118,7 +173,7 @@
           <img src="img/assets/icon-heart.svg" alt="most loved items title heart icon">
           <h2>Most loved items</h2>
           <span>favourite products from our users</span>
-          <div class="most-loved-btns" rold="group">
+          <div class="most-loved-btns" role="group">
             <button type="button" name="button">
               <img src="img/assets/icon-btn-prev.svg" alt="most loved items previous button">
             </button><button type="button" name="button">
@@ -339,5 +394,6 @@
       </ul>
     </footer>
   </div>
+  <script src="js/aware1920.js" charset="utf-8"></script>
 </body>
 </html>
