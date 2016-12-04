@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript + DOM API</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <style media="screen">
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #3d3d3d;
+    }
+    img {
+      vertical-align: top;
+    }
+    button {
+      cursor: pointer;
+      border: 0;
+      outline: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /*.section-1 button:active {
+      border: 1px solid #f3f3f3;
+    }
+    /*.section-2 button:active {
+      border: 1px solid #222;
+    }*/
+    .section-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .section-wrapper button {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .section-wrapper button.clicked {
+      /*top: -2px;*/
+      transform: scale(1.05);
+      animation: clicked 1s ease-out infinite;
+      z-index: 1000;
+    }
+    .section-wrapper button.clicked::after {
+      content: '';
+      display: block;
+      width: 90%;
+      margin-left: 5%;
+      height: 0;
+      position: absolute;
+      animation: clickedshadow 1s ease-out infinite;
+      z-index: -1;
+    }
+    .notification {
+      /*position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);*/
+      position: relative;
+      color: #ebebeb;
+      padding: 1em;
+      border: 2px solid #356a8e;
+    }
+
+    .notification::before {
+      content: 'Notification';
+      position: absolute;
+      top: -20px;
+      left: -2px;
+      color: #356a8e;
+    }
+    .section-1, .section-2 {
+      padding: 2em;
+      border-radius: 10px;
+      background: #8e8e8e;
+    }
+    .section-1 {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 1px solid #bdbdbd;
+    }
+    .section-2 {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .section-1.disabled,
+    .section-2.disabled {
+      opacity: 0.3;
+    }
+
+    .change-btn {
+      position: relative;
+      margin-top: 30px;
+      background: #b0b0b0;
+      border: 2px solid #b0b0b0;
+      border-radius: 10px;
+      padding: 1em 1.5em;
+      color: #778134;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: bold;
+    }
+    .change-btn:hover {
+      border: 2px solid #778134;
+    }
+    .change-btn:active {
+      top: 3px;
+    }
+
+    @keyframes clicked {
+      0% {
+        top: -5px;
+      }
+      50% {
+        top: 0;
+      }
+      100% {
+        top: -5px;
+      }
+    }
+    @keyframes clickedshadow {
+      0% {
+        box-shadow: 0 0 35px 10px gray;
+        bottom: -15px;
+      }
+      50% {
+        box-shadow: 0 0 35px 15px gray;
+        bottom: -10px;
+      }
+      100% {
+        box-shadow: 0 0 35px 10px gray;
+        bottom: -15px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p class="notification">포스터를 선택하세요.</p>
+    <div class="section-wrapper">
+      <div class="section-1">
+        <button type="button" class="btn"><img src="img/confession.png" alt="confession"></button>
+        <button type="button" class="btn"><img src="img/kubo.png" alt=""></button>
+        <button type="button" class="btn"><img src="img/louder.png" alt=""></button>
+      </div>
+      <div class="section-2">
+        <button type="button" class="btn"><img src="img/notebook.png" alt=""></button>
+        <button type="button" class="btn"><img src="img/stranger.png" alt=""></button>
+        <button type="button" class="btn"><img src="img/woman.png" alt=""></button>
+      </div>
+    </div>
+    <button type="button" class="change-btn">Change</button>
+  </div>
+
+
+  <!-- 문서 객체 모델 API를 보다 손쉽게 처리해주는 자바스크립트 라이브러리 -->
+  <!-- 의존성 때문에 Helper를 먼저 부른다. app.js는 DOM_Helper.js에 의존한다. -->
+  <script src="lib/DOM_Helper.js" charset="utf-8"></script>
+  <!-- <script src="js/app.js" charset="utf-8"></script> -->
+  <!-- <script src="js/dom-api.js" charset="utf-8"></script> -->
+  <script src="js/change-images.js" charset="utf-8"></script>
+</body>
+</html>
