@@ -1,0 +1,297 @@
+@import "config/mixins"
+@import "config/placeholders"
+
+
+body
+  @include reset-box-model
+
+div, section
+  @include box-sizing(border-box)
+
+h1, h2
+  @include reset-heading
+
+a
+  @include reset-anchor
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active
+    color: inherit
+
+
+
+ul
+  @include reset-list
+  li
+    float: left
+    // display: inline-block
+
+$page-desktop-width: 1920px
+$page-tablet-width: 1024px
+
+$header-nav-height: 110px
+$header-img-height: 980px
+$header-img-padding: 160px
+$header-slider-list-width: ($page-desktop-width - ($header-img-padding * 2)) / 3
+$header-slider-list-height: 214px
+
+.container
+  margin: 0 auto
+  width: 100%
+  overflow: hidden
+
+.header
+  position: relative
+  width: 100%
+  height: $header-img-height
+  background-image: url(../img/assets/photo-header.png)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  .header-nav
+    @include flexbox($align-items: center)
+    @include position(absolute, top 0 z-index 1000)
+    width: 100%
+    height: $header-nav-height
+    color: #fff
+    .header-logo
+      margin-left: 65px
+      margin-right: 65px
+    a
+      &:hover,
+      &:active,
+      &:focus
+        outline: 0
+        color: #42f2cf
+    h1
+      display: inline-block
+      font-size: 18px
+      font-weight: bold
+    nav
+      margin-left: auto
+      margin-right: 160px
+      li
+        a
+          margin-left: 55px
+          color: #fff
+          font-size: 18px
+          text-transform: capitalize
+          font-weight: lighter
+    &.fixed
+      position: fixed
+      height: 68px
+      color: #222324
+      background: #fff
+      nav
+        li
+          a
+            color: #222324
+            &:hover,
+            &:active,
+            &:focus
+              outline: 0
+              color: #42f2cf
+
+  .header-img
+    +flexbox($align-items: center)
+    width: 100%
+    height: 100%
+    padding:
+      left: percentage($header-img-padding / $page-desktop-width)
+      right: percentage($header-img-padding / $page-desktop-width)
+      top: $header-nav-height
+      bottom: $header-slider-list-height
+    h2
+      // margin-top: ($header-img-height - $header-nav-height - $header-slider-list-height) * 0.5
+      // transform: translateY(-50%)
+      font-size: 80px
+      color: #fff
+      img
+        transform: translateY(-50%)
+        margin-left: 35px
+
+  .header-slider
+    @include position(absolute, bottom 0)
+    width: 100%
+    ul
+      li
+        width: percentage($header-slider-list-width / $page-desktop-width)
+        height: $header-slider-list-height
+        a
+          @include flexbox($direction: column)
+          @include box-sizing(border-box)
+          padding-top: 40px
+          border-top: 2px solid #fff
+          color: #fff
+          &:hover,
+          &:active,
+          &:focus
+            outline: 0
+            border-top: 2px solid #42f2cf
+            color: #42f2cf
+          strong
+            font-size: 16px
+          span
+            font-size: 14px
+            margin-top: 15px
+
+
+$break-small: 750px
+$break-large: 1024px
+
+.main-works
+  max-width: $page-desktop-width
+  height: 1440px
+  @include flexbox($direction: column)
+  flex-wrap: wrap
+
+.d-1
+  flex: 0 0 480px
+
+.d-2
+  flex: 0 0 960px
+
+.box
+  width: 480px
+
+.box-1
+  order: 1
+
+.box-2
+  order: 2
+
+.box-3
+  order: 3
+
+.box-4
+  order: 4
+
+.box-5
+  order: 5
+
+.box-6
+  order: 6
+
+.box-7
+  order: 7
+
+.box-8
+  order: 8
+
+.main-bottom-sections
+  background: #000
+  color: #fff
+
+.main-news,
+.main-twitter
+  padding-top: 87px
+  margin:
+    left: percentage($header-img-padding / $page-desktop-width)
+    right: percentage($header-img-padding / $page-desktop-width)
+  h2
+    float: left
+  ol
+    +reset-list
+    @extend %clearfix
+    li
+      float: left
+      margin-bottom: 87px
+  button
+    +reset-button
+
+.main-news
+  border-bottom: 2px solid #55acee
+.main-twitter
+  border-bottom: 2px solid #171717
+
+
+// @include responsive($media: desktop, $break-large: $break-large)
+//   .container
+//     width: $page-desktop-width
+//   .main-works
+//     width: 1920px
+//   .d-1
+//     flex: 0 0 480px
+//
+//   .d-2
+//     flex: 0 0 960px
+//
+//
+//   .box
+//     width: 480px
+//
+//
+//
+//
+// @include responsive($media: tablet, $break-small: $break-small, $break-large: $break-large)
+//   .header
+//     height: 680px
+//     .header-img
+//       padding:
+//         left: percentage(112px / $page-tablet-width)
+//         right: percentage(112px / $page-tablet-width)
+//       h2
+//         font-size: 60px
+//     .header-slider
+//       ul
+//         li
+//           width: percentage(266.67px / $page-tablet-width)
+  // .main-works
+  //   width: $break-large
+  //   height: $break-large * 2
+  // .t-1
+  //   flex: 0 0 ($break-large / 2)
+  // .t-2
+  //   flex: 0 0 $break-large
+  //
+  // .box
+  //   width: $break-large / 2
+
+@include responsive($media: mobile, $break-small: $break-small)
+  .m-hidden
+    display: none
+
+  .header
+    height: 780px
+    .header-img
+      // padding:
+      //   left: 88px
+      //   right: 88px
+      padding-bottom: 0
+      h2
+        font-size: 68px
+
+
+.box-1
+  background: url(../img/assets/photo-work-1.png) no-repeat
+  background-size: cover
+
+.box-2
+  background: url(../img/assets/photo-work-2.png) no-repeat
+  background-size: cover
+
+.box-3
+  background: url(../img/assets/photo-work-3.png) no-repeat
+  background-size: cover
+
+.box-4
+  background: url(../img/assets/photo-work-4.png) no-repeat
+  background-size: cover
+
+.box-5
+  background: url(../img/assets/photo-work-5.png) no-repeat
+  background-size: cover
+
+.box-6
+  background: url(../img/assets/photo-work-6.png) no-repeat
+  background-size: cover
+
+.box-7
+  background: url(../img/assets/photo-work-7.png) no-repeat
+  background-size: cover
+
+.box-8
+  background: url(../img/assets/photo-work-8.png) no-repeat
+  background-size: cover

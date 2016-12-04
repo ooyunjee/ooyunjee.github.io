@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Folio</title>
+  <link rel="stylesheet" href="css/folio.css" media="screen" title="no title">
+  <style>
+
+
+    @media only screen and (max-width: 750px) {
+      .main-works {
+        /*width: 750px;*/
+        height: 1500px;
+      }
+
+      .m-1 {
+        flex: 0 0 375px;
+      }
+
+      .m-2 {
+        flex: 0 0 750px;
+      }
+
+      .box {
+        width: 375px;
+      }
+
+      .box-1 {
+        order: 1;
+      }
+      .box-3 {
+        order: 4;
+      }
+      .box-4 {
+        order: 5;
+      }
+      .box-5 {
+        order: 2;
+      }
+      .box-7 {
+        order: 3;
+      }
+      .box-8 {
+        order: 6;
+      }
+    }
+
+    @media only screen and (min-width: 751px) and (max-width: 1023px) {
+      .main-works {
+        height: 2048px;
+      }
+      .t-1 {
+        flex: 0 0 512px;
+      }
+      .t-2 {
+        flex: 0 0 1024px;
+      }
+      .box {
+        width: 512px;
+      }
+
+      .t-hidden {
+        display: none;
+      }
+
+      .box-1 {
+        order: 1;
+      }
+      .box-3 {
+        order: 4;
+      }
+      .box-4 {
+        order: 5;
+      }
+      .box-5 {
+        order: 2;
+      }
+      .box-7 {
+        order: 3;
+      }
+      .box-8 {
+        order: 6;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+
+
+      /*.d-1 {
+        flex: 0 0 480px;
+      }
+      .d-2 {
+        flex: 0 0 960px;
+      }
+
+      .box {
+        width: 480px;
+      }
+      .box-1 {
+        order: 1;
+      }
+      .box-2 {
+        order: 2;
+      }
+      .box-3 {
+        order: 3;
+      }
+      .box-4 {
+        order: 4;
+      }
+      .box-5 {
+        order: 5;
+      }
+      .box-6 {
+        order: 6;
+      }
+      .box-7 {
+        order: 7;
+      }
+      .box-8 {
+        order: 8;
+      }*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-nav">
+        <a href=""><img class="header-logo" src="img/assets/icon-logo.svg" alt="logo image"></a>
+        <h1><a href="" class="t-hidden m-hidden">Showfol.io</a></h1>
+        <nav>
+          <ul>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-img">
+        <!-- <img src="img/assets/photo-header.png" alt=""> -->
+        <h2>We define and design purposeful brand experiences across channels.<a href="#"><img src="img/assets/icon-arrow.svg" alt=""></a></h2>
+        <div class="header-slider m-hidden">
+          <ul>
+            <li>
+              <a href="#"><strong>WallyHOME™</strong><span>Branding</span></a>
+            </li>
+            <li>
+              <a href="#"><strong>Who we are?</strong><span>Interviewed</span></a>
+            </li>
+            <li>
+              <a href="#"><strong>Nike Fuel 360</strong><span>Packaging</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-works">
+        <div class="box box-1 d-1 t-1 m-1"></div>
+        <div class="box box-2 d-2 t-hidden m-hidden"></div>
+        <div class="box box-3 d-2 t-2 m-2"></div>
+        <div class="box box-4 d-1 t-1 m-1"></div>
+        <div class="box box-5 d-1 t-1 m-1"></div>
+        <div class="box box-6 d-2 t-hidden m-hidden"></div>
+        <div class="box box-7 d-2 t-2 m-2"></div>
+        <div class="box box-8 d-1 t-1 m-1"></div>
+      </div>
+      <div class="main-bottom-sections">
+        <section class="main-news">
+          <h2>News</h2>
+          <ol>
+            <li>
+              <div class="news-content">
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                <time class="2014-12-09-tue">Tuesday, December 9, 2014</time>
+              </div>
+              <button type="button" class="news-btn">
+                <img src="img/assets/icon-arrow.svg" alt="">
+              </button>
+            </li>
+            <li class="t-hidden m-hidden">
+              <div class="news-content">
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                <time class="2014-12-09-mon">Monday, December 9, 2014</time>
+              </div>
+              <button type="button" class="news-btn">
+                <img src="img/assets/icon-arrow.svg" alt="">
+              </button>
+            </li>
+          </ol>
+        </section>
+        <section class="main-twitter">
+          <h2>Twitter</h2>
+          <ol>
+            <li>
+              <p>Material UI Kit: Navs by @showfol.io on @dribbble https://dribbble.com/shots/1759197-Material-UI-Kit-Navs …</p>
+              <time class="2014-12-09-tue">Friday, December 5, 2014</time>
+            </li>
+            <li>
+              <p>Amazing Pixel Art by Pixel, Huh | Abduzeedo Design Inspiration http://abduzeedo.com/amazing-pixel-art-pixel-huh …</p>
+              <time class="2014-12-09-mon">Saturday, December 6, 2014</time>
+            </li>
+            <li class="t-hidden m-hidden">
+              <p>We've been nominated for UI8 at Awwwards - please vote for us! http://www.awwwards.com/best-websites/ui8-1 …</p>
+              <time class="2014-12-09-mon">Sunday, December 7, 2014</time>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+    </footer>
+  </div>
+
+  <script src="js/folio.js" charset="utf-8"></script>
+</body>
+</html>
